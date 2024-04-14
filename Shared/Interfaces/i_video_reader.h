@@ -1,0 +1,69 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// i_video_reader.h
+// ---------------------
+// begin     : Nov 2005
+// modified  : 19 Jan 2006
+// author(s) : Albert Akhriev
+// email     : Albert.Akhriev@biones.com
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __ELVEES_BASE_VIDEO_READER_INTERFACE_H__
+#define __ELVEES_BASE_VIDEO_READER_INTERFACE_H__
+
+#include "../Common/integers.h"
+
+namespace Elvees
+{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Exception that could be thrown while reading videostream (file, achive, camera, etc.).
+///////////////////////////////////////////////////////////////////////////////////////////////////
+class VideoReaderException : public std::runtime_error
+{
+public:
+  explicit VideoReaderException( const std::string & message ) : std::runtime_error( message )
+  {
+  }
+};
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Base class of any video-reader.
+///
+/// It is assumed that any member function can throw 'VideoReaderException' on failure.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+class IBaseVideoReader
+{
+public:
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Virtual destructor ensures safe deallocation.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+virtual ~IBaseVideoReader() {}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Function returns the general header of images of a sequence.
+///
+/// \return  reference to the internal header storage.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+virtual const BITMAPINFOHEADER & GetHeader() const  = 0;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Function reads a new frame from a sequence, and, in the case of video file,
+///        moves internal pointer to next frame.
+///
+/// It is assumed that returned pointer to the image buffer remains valid until the next call of
+/// Read(..) function, i.e. the image is locked between successive calls.
+///
+/// \param  pBytes  reference to a pointer that will receive the address of internal image buffer.
+/// \param  time    the time stamp associated with the frame being read.
+/// \return         nonzero if a frame has been successfully read, otherwise zero
+///                 if the end of a file has been reached or video became unavailable.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+virtual bool Read( const ubyte *& pBytes, ulong & time ) = 0;
+
+};
+
+} // namespace Elvees
+
+#endif // __ELVEES_BASE_VIDEO_READER_INTERFACE_H__
+

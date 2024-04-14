@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoClient", "VideoClient.vcproj", "{A71CAF8C-64E1-4082-AFA3-6D72F89BED1B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED} = {477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OGLRender", "..\OGLRender\OGLRender.vcproj", "{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}"
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A71CAF8C-64E1-4082-AFA3-6D72F89BED1B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A71CAF8C-64E1-4082-AFA3-6D72F89BED1B}.Debug|Win32.Build.0 = Debug|Win32
+		{A71CAF8C-64E1-4082-AFA3-6D72F89BED1B}.Release|Win32.ActiveCfg = Release|Win32
+		{A71CAF8C-64E1-4082-AFA3-6D72F89BED1B}.Release|Win32.Build.0 = Release|Win32
+		{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}.Debug|Win32.Build.0 = Debug|Win32
+		{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}.Release|Win32.ActiveCfg = Release|Win32
+		{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

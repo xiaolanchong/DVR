@@ -1,0 +1,47 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// i_data_transfer.h
+// ---------------------
+// begin     : Dec 2005
+// modified  : 9 Feb 2006
+// author(s) : Albert Akhriev
+// email     : Albert.Akhriev@biones.com
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __ELVEES_DATA_TRANSFER_INTERFACE_H__
+#define __ELVEES_DATA_TRANSFER_INTERFACE_H__
+
+namespace Elvees
+{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Interface of any data storage that should be transferred between system's components.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+class IDataType
+{
+public:
+  virtual uint type() const = 0;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Structure wraps a data storage of any type into IDataType interface.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+template< class DATA_TYPE, uint DATA_TYPE_ID >
+class TDataWraper : public IDataType
+{
+public:
+  typedef  DATA_TYPE  data_type;
+
+  data_type data;  //!< data storage
+
+  TDataWraper() : data() {}
+
+  explicit TDataWraper( const data_type & source ) : data( source ) {}
+
+  virtual uint type() const { return DATA_TYPE_ID; }
+};
+
+} // namespace Elvees
+
+#endif // __ELVEES_DATA_TRANSFER_INTERFACE_H__
+

@@ -1,0 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// types.h
+// ---------------------
+// begin     : 2006
+// modified  : 30 Jan 2006
+// author(s) : Albert Akhriev
+// email     : Albert.Akhriev@biones.com
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __DEFINE_ELVEES_TYPES_H__
+#define __DEFINE_ELVEES_TYPES_H__
+
+typedef  std::vector<ubyte>  BinaryData;
+
+#endif // __DEFINE_ELVEES_TYPES_H__
+

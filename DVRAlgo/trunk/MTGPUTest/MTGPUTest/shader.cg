@@ -1,0 +1,59 @@
+struct FragmentProgramInput
+{
+  float2 texcoord : TEXCOORD;
+};
+
+
+float4 background_accumulation ( FragmentProgramInput IN, 
+uniform samplerRECT videoFrame,
+uniform samplerRECT background,
+uniform samplerRECT motionMap ): COLOR
+{	
+	float3 crntFrame = texRECT( videoFrame, IN.texcoord ).rgb ;
+	float3 bgrnd = texRECT( background, IN.texcoord ).rgb;
+	float3 diff = crntFrame - bgrnd;
+
+	float3 motion = texRECT( motionMap, IN.texcoord ).rgb;
+	float3 output;
+	const float alpha = 0.1;
+	const float motionAlpha = 0.05;
+	
+	if( motion.r < 0.5 )
+		output = alpha * crntFrame + (1.0 - alpha) * bgrnd;
+	else
+		output = motionAlpha * crntFrame + (1.0 - motionAlpha) * bgrnd;
+
+	return float4(output, 1.0);
+}
+
+
+float4 motion_detection ( FragmentProgramInput IN, 
+uniform samplerRECT videoFrame,
+uniform samplerRECT background ): COLOR
+{	
+	float3 crntFrame = texRECT( videoFrame, IN.texcoord ).rgb ;
+	float3 bgrnd = texRECT( background, IN.texcoord ).rgb;
+	float3 diff = crntFrame - bgrnd;
+	
+	float res = length( diff ) * 5.0; 
+	return float4(res, crntFrame.yz, 1.0);
+}
+
+
+float4 blur_program ( FragmentProgramInput IN, 
+uniform samplerRECT videoFrame ): COLOR
+{	
+  float4 blurImage = float4(0,0,0,0);
+  int k = 4;
+  float w = 1.0 / ((2 * k + 1 ) );// * (2 * k + 1 ) );
+	for ( int i = -k; i <= k; i++ ) 
+	{
+		int j = 0;
+	//	for ( int j = -k; j <= k; j++) 
+//		{
+			float2 texCoord = IN.texcoord + float2(i, j);			
+			blurImage += w * texRECT( videoFrame, texCoord );
+//		}
+	}
+	return blurImage;
+}

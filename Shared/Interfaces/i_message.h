@@ -1,0 +1,38 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// i_message.h
+// ---------------------
+// begin     : Dec 2005
+// author(s) : Albert Akhriev
+// email     : Albert.Akhriev@biones.com
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __ELVEES_MESSAGE_INTERFACE_H__
+#define __ELVEES_MESSAGE_INTERFACE_H__
+
+#include "../Common/integers.h"
+
+namespace Elvees
+{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \brief Interface class of any message handler.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+class IMessage
+{
+public:
+  enum MessageType
+  {
+    mt_debug_info = 0,
+    mt_info,
+    mt_warning,
+    mt_error
+  };
+
+  virtual void Print( sint messageType, const char * szMessage ) = 0;
+  virtual ~IMessage() {}
+};
+
+} // namespace Elvees
+
+#endif // __ELVEES_MESSAGE_INTERFACE_H__
+

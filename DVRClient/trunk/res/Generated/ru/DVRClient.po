@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (©) ElVEES, 2005-2006
+# This file is distributed under the same license as the DVR package.
+# FIRST AUTHOR <Eugene.Gorbachev@biones.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: DVRClient 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-11-15 17:49+0300\n"
+"PO-Revision-Date: 2006-08-18 16:15+0300\n"
+"Last-Translator: Gorbachev Eugene <Eugene.Gorbachev@biones.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1251\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Show single camera"
+msgstr "Показать одну камеру"
+
+msgid "Show 2x2 camera arrangement"
+msgstr "Показать камеры в массиве 2x2"
+
+msgid "Show 3x3 camera arrangement"
+msgstr "Показать камеры в массиве 3x3"
+
+msgid "Show 7 cameras"
+msgstr "Показать 7 камер"
+
+msgid "Show 13 cameras"
+msgstr "Показать 13 камер"
+
+msgid "Show 4x4 camera arrangement"
+msgstr "Показать камеры в массиве 4x4"
+
+msgid "Keep camera aspect ratio on window resizing"
+msgstr "Сохранять отношение размеров изображения при масшабировании"
+
+msgid "Fill whole available space on window resizing"
+msgstr "Заполнить изображением всю доступную область окна"
+
+msgid "Keep camera image size on window resizing"
+msgstr "Сохранять размеры изображения при масштабировании"
+
+msgid "Full screen"
+msgstr "Во весь экран"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "System settings"
+msgstr "Настройки"
+
+msgid "Video archive settings"
+msgstr "Настройки архива"
+
+msgid "Free disk space (percents)"
+msgstr "Свободное место на диске (в %)"
+
+msgid "Keep archive for days"
+msgstr "Сохранять архив за дней"
+
+msgid "Record the video archive"
+msgstr "Записывать архив"
+
+msgid "Always"
+msgstr "Всегда"
+
+msgid "Only when a motion has been detected"
+msgstr "Только если обнаружено движение"
+
+msgid "Never"
+msgstr "Никогда"
+
+msgid "Motion detection sensitivity"
+msgstr "Чувствительность обнаружения движения"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Set archive time period"
+msgstr "Время архива"
+
+msgid "From"
+msgstr "От"
+
+msgid "To"
+msgstr "До"
+
+msgid "Start working with archive"
+msgstr "Начать работу с архивом"
+
+msgid "Start"
+msgstr "Начать"
+
+msgid "Play"
+msgstr "Воспроизвести"
+
+msgid "Pause"
+msgstr "Приостановить"
+
+msgid "Stop"
+msgstr "Остановить"
+
+msgid "Alarms"
+msgstr "Тревожные ситуации"
+
+msgid "Time scale"
+msgstr "Масштаб"
+
+msgid "Select time unit"
+msgstr "Выбрать единицу времени"
+
+msgid "Minutes"
+msgstr "Минуты"
+
+msgid "Hours"
+msgstr "Часы"
+
+msgid "Days"
+msgstr "Дни"
+
+msgid "Realtime video mode"
+msgstr "Режим реального видео"
+
+msgid "Archive video mode"
+msgstr "Режим архива"
+
+msgid "Log mode"
+msgstr "Log mode"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\common\CameraCanvas.cpp:63
+#, c-format
+msgid "Camera %d"
+msgstr "Камера %d"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\common\CameraCanvas.cpp:68
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\common\CameraCanvas.cpp:72
+msgid "None"
+msgstr "Нет"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\common\CameraCanvas.cpp:266
+msgid "No image"
+msgstr "Нет изображения"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\common\CameraNaming.cpp:35
+msgid "Set camera name..."
+msgstr "Задать имя камеры..."
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\main\MainFrame.cpp:28
+#, fuzzy
+msgid "O2KE-Client"
+msgstr "DVR Клиент"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\main\MainFrame.cpp:79
+msgid "Video"
+msgstr "Видео"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\main\MainFrame.cpp:80
+msgid "Archive"
+msgstr "Архив"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\main\MainFrame.cpp:81
+msgid "Log"
+msgstr "Журнал"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\mod_archive\ArchiveControlPanel.cpp:94
+msgid "The archive start time is greater or equal then the end one"
+msgstr "Начальное время архива больше или равно конечному"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\mod_archive\ArchiveControlPanel.cpp:94
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\mod_archive\ArchiveControlPanel.cpp:99
+msgid "Wrong time period"
+msgstr "Недопустимый промежуток времени"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\mod_archive\ArchiveControlPanel.cpp:99
+msgid "The archive end time is greater then the current one"
+msgstr "Конечное время архива больше чем текущее"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\mod_archive\ArchiveSplitter.cpp:113
+msgid "Error occuried while loading data"
+msgstr "Ошибка при загрузке данных"
+
+#: C:\Project\VCproject\_Elvees\DVR\HEAD\DVRClient\trunk\mod_archive\ArchiveSplitter.cpp:114
+msgid "Database error"
+msgstr "Ошибка базы данных"

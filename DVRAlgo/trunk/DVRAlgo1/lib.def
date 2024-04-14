@@ -1,0 +1,7 @@
+EXPORTS
+    CreateCameraAnalyzer
+    CreateHallAnalyzer
+    SetDefaultParameters
+    GetParameters
+    LoadParameters
+    SaveParameters

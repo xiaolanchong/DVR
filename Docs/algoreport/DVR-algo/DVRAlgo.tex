@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{russlh,indentfirst}
+\usepackage{graphicx,color}
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{pst-all,pst-math,pst-infixplot}
+\frenchspacing
+\oddsidemargin=10mm
+\evensidemargin=10mm
+\textwidth=149mm
+\topmargin=0mm
+\textheight=246mm
+\headsep=0mm
+\headheight=0mm
+
+\def\mymonth{\ifcase\month \or января\or февраля\or марта\or апреля\or мая\or
+ июня\or июля\or августа\or сентября\or октября\or ноября\or декабря \fi}
+
+\date{\the\day \ \mymonth \ \the\year}
+
+\newcounter{remark_counter}%
+\setcounter{remark_counter}{1}%
+\newtheorem{remark}{Замечание}[remark_counter]%
+
+\newcounter{definition_counter}%
+\setcounter{definition_counter}{1}%
+\newtheorem{definition}{Определение}[definition_counter]%
+
+\newcounter{lemma_counter}%
+\setcounter{lemma_counter}{1}%
+\newtheorem{lemma}{Лемма}[lemma_counter]%
+
+\newcounter{corollary_counter}%
+\setcounter{corollary_counter}{1}%
+\newtheorem{corollary}{Следствие}[corollary_counter]%
+
+\newcounter{assumption_counter}%
+\setcounter{assumption_counter}{1}%
+\newtheorem{assumption}{Предположение}[assumption_counter]%
+
+\begin{document}
+\title{Алгоритмы детектирования и анализа движения для системы \texttt{DVR}}
+\author{Альберт Ахриев \and Александр Болтнев}
+\maketitle
+
+\input{intro.tex}
+\input{motion-detection.tex}
+\input{motion-analysis.tex}
+\input{appendix1.tex}
+
+\end{document}

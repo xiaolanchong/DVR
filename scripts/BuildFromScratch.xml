@@ -1,0 +1,226 @@
+<!-- 
+	Description: 	DVR build file from scratch, 
+					Ant 1.6.5 
+					svn 
+					vcbuild
+	Author:		 	Eugene Gorbachev
+	Create:			2006-03-22
+	Last modified:	2006-09-19
+	Changelog:
+-->
+
+<project name="DVR" default="build" basedir=".">
+    <description>Build DVR project from scratch </description>
+  <!-- set global properties for this build -->
+
+	<target name="init_debug_vc_config" if="debug">
+		<property name="vc_config" 	location="Debug Total|Win32"	/>
+	</target>
+  
+  <target name="init">
+    <!-- Create the time stamp -->
+  <!--
+    <tstamp> 
+    	<format property="stamp" pattern="yyyy_MM_dd_HH_mm" locale="en"/>
+    </tstamp>
+    <property name="main_dir" 	location="DVR_${stamp}"	/>
+    <mkdir dir="${main_dir}" />
+  -->
+   	
+   	<property name="main_dir" 	location="DVR_2006_09_19_18_10"	/>
+    
+     <property name="3rd_party_dir" 	location="${main_dir}/3rd_party"	/>
+     <property name="3rd_party_url" 	value="http://zork/svn/3rd_party/"	/>
+     <property name="svn_arg" 			value="export -r HEAD --non-interactive"	/>
+
+     <property name="dvr_dir" 	location="${main_dir}/DVR/HEAD"	/>
+     <property name="dvr_url" 	value="http://zork/svn/DVR/HEAD"	/>
+     
+     <property name="common_libs_dir" location="${main_dir}\CommonLibs\HEAD" />
+     <property name="common_libs_url" value="http://zork/svn/CommonLibs/HEAD" />
+     
+     <property name="trunk" value="yes" /> 
+     <property name="vc_config" value="Release Total|Win32" />
+      
+  </target>  
+  
+  <target name="export" depends="init, export-3rd_party, export-common_libs, export-trunk" >
+  </target>
+  
+  
+  <target name="export-3rd_party" depends="init" >
+   	<mkdir dir="${main_dir}/3rd_party" />
+ 
+  	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${3rd_party_url}/DXSDK2004Jul" />
+  		<arg file ="${3rd_party_dir}/DXSDK2004Jul"/>
+  	</exec> 
+  	
+  	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${3rd_party_url}/PSDK2006Mar" />
+  		<arg file ="${3rd_party_dir}/PSDK2006Mar"/>
+  	</exec> 
+  	
+  	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${3rd_party_url}/boost_1_33_1" />
+  		<arg file ="${3rd_party_dir}/boost_1_33_1"/>
+  	</exec>
+
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${3rd_party_url}/wxWidgets-2.7.0" />
+  		<arg file ="${3rd_party_dir}/wxWidgets-2.7.0"/>
+  	</exec>
+ 	
+  </target>
+  
+ <target name="export-common_libs" depends="init" >
+   	<mkdir dir="${common_libs_dir}" />
+   	
+   	 <mkdir dir="${common_libs_dir}/ElveesTools" />
+   	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${common_libs_url}/ElveesTools/trunk" />
+  		<arg file ="${common_libs_dir}/ElveesTools/trunk"/>
+  	</exec>
+  	
+   	 <mkdir dir="${common_libs_dir}/ExceptionHandler" />
+   	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${common_libs_url}/ExceptionHandler/trunk" />
+  		<arg file ="${common_libs_dir}/ExceptionHandler/trunk"/>
+  	</exec>
+   	
+  </target>
+  
+  <target name="export-trunk" depends="init">
+   	<mkdir dir="${dvr_dir}" />
+
+    <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/3rd_party" />
+  		<arg file ="${dvr_dir}/3rd_party"/>
+  	</exec>
+  
+   	<mkdir dir="${dvr_dir}/chcsva" />
+    <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/chcsva/trunk/" />
+  		<arg file ="${dvr_dir}/chcsva/trunk/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DBVideoConfig" />
+    <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DBVideoConfig/trunk/" />
+  		<arg file ="${dvr_dir}/DBVideoConfig/trunk/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVRAlgo" />
+  	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRAlgo/trunk/" />
+  		<arg file ="${dvr_dir}/DVRAlgo/trunk/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVRBackup" />
+  	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRBackup/trunk/" />
+  		<arg file ="${dvr_dir}/DVRBackup/trunk/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVRClient" />
+  	 <exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRClient/trunk/" />
+  		<arg file ="${dvr_dir}/DVRClient/trunk/"/>
+  	</exec>
+  	
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRControls/" />
+  		<arg file ="${dvr_dir}/DVRControls/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVRDBBridge" />
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRDBBridge/trunk/" />
+  		<arg file ="${dvr_dir}/DVRDBBridge/trunk/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVREngine" />
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVREngine/trunk/" />
+  		<arg file ="${dvr_dir}/DVREngine/trunk/"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVRRender" />
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRRender/trunk" />
+  		<arg file ="${dvr_dir}/DVRRender/trunk"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/DVRLauncher" />
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVRLauncher/trunk" />
+  		<arg file ="${dvr_dir}/DVRLauncher/trunk"/>
+  	</exec>
+  	
+  	<mkdir dir="${dvr_dir}/InstallHelper" />
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/InstallHelper/trunk" />
+  		<arg file ="${dvr_dir}/InstallHelper/trunk"/>
+  	</exec>  	
+  	
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/Shared/" />
+  		<arg file ="${dvr_dir}/Shared/"/>
+  	</exec>
+  	
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/Utility/" />
+  		<arg file ="${dvr_dir}/Utility/"/>
+  	</exec>
+  	
+  	<exec executable="svn" >
+  		<arg line ="${svn_arg}" />
+  		<arg value="${dvr_url}/DVR-trunk.sln" />
+  		<arg file ="${dvr_dir}/DVR-trunk.sln"/>
+  	</exec>
+  	
+  </target>
+  
+  <target name="build" depends="init, init_debug_vc_config, export">
+  	<property name="vcbuild" location="C:\Env\VS8\VC\vcpackages\vcbuild" />
+  	<property name="devenv" location="C:\Env\VS8\Common7\IDE\devenv.exe" />
+  <!-- --> 
+  	<exec executable="${vcbuild}" >
+  		<arg file ="${3rd_party_dir}/boost_1_33_1/boost_1_33_1.vc80.vcproj"/>
+  		<arg value = "Debug|Win32" />
+  	</exec>
+  <!-- -->	
+	
+	<mkdir dir="${dvr_dir}/bin/debug" />
+	<mkdir dir="${dvr_dir}/bin/release" />
+  	
+  	<exec executable="${devenv}" >
+  		<arg file ="${dvr_dir}/DVR-trunk.sln"/>
+  		<arg value = "/Rebuild" />
+  		<arg value = "${vc_config}" />
+  		<arg value = "/Out" />
+  		<arg file = "BuildLog.txt" />
+  	</exec>
+  	
+  </target>
+</project>

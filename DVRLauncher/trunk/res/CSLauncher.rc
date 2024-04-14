@@ -1,0 +1,288 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "CSLauncher.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "CSLauncher.ico"
+IDR_CSLauncherTYPE      ICON                    "CSLauncherDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About O2KE-Server...",       ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 246, 58
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About O2KE-Server"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,10,20,20
+    LTEXT           "Copyright © ElVEES, 2006",IDC_STATIC,41,15,119,12
+    DEFPUSHBUTTON   "OK",IDOK,189,7,50,16,WS_GROUP
+    LTEXT           "O2KE-Server",IDC_STATIC,41,30,59,16
+    LTEXT           "",IDC_STATIC_LAUNCHER_VERSION,100,30,82,16
+END
+
+IDD_CSLAUNCHER_FORM DIALOGEX 0, 0, 400, 232
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Connection string",IDC_STATIC,6,3,59,56
+    LTEXT           "Number of lines in log windows",IDC_STATIC,4,62,61,16
+    EDITTEXT        IDC_EDIT_LIN,65,62,39,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_LINE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,101,63,9,13
+    CONTROL         "",IDC_RICHEDIT_CS,"RichEdit20A",ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_TABSTOP,65,3,332,56
+END
+
+IDD_SELECT_MODE DIALOGEX 0, 0, 248, 14
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB_ROOM,"SysTabControl32",0x0,0,0,247,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2922
+ PRODUCTVERSION 1,0,0,2922
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "ElVEES"
+            VALUE "FileDescription", "Orwell2K Economy Server"
+            VALUE "FileVersion", "1, 0, 0, 2922"
+            VALUE "InternalName", "O2KE-Server.exe"
+            VALUE "LegalCopyright", "Copyright © ElVEES, 2005-2006"
+            VALUE "OriginalFilename", "O2KE-Server.exe"
+            VALUE "ProductName", "O2KE-Server"
+            VALUE "ProductVersion", "1, 0, 0, 2922"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        VERTGUIDE, 41
+        VERTGUIDE, 100
+        VERTGUIDE, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+        HORZGUIDE, 30
+        HORZGUIDE, 46
+        HORZGUIDE, 51
+    END
+
+    IDD_CSLAUNCHER_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 397
+        VERTGUIDE, 10
+        VERTGUIDE, 65
+        VERTGUIDE, 96
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 229
+        HORZGUIDE, 59
+        HORZGUIDE, 71
+        HORZGUIDE, 86
+        HORZGUIDE, 100
+        HORZGUIDE, 114
+        HORZGUIDE, 135
+        HORZGUIDE, 150
+        HORZGUIDE, 169
+    END
+
+    IDD_SELECT_MODE, DIALOG
+    BEGIN
+        VERTGUIDE, 42
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "O2KE-Server\n\nO2KE-Server\n\n\nO2KE-Server.Document\nO2KE-Server.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "O2KE-Server"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_RESTART       "Restart room server"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SERVER_ALREADY_LAUNCHED "Сервер уже запущен"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

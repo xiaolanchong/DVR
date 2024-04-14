@@ -1,0 +1,15 @@
+
+EXPORTS	
+			;DllRegisterServer			PRIVATE
+			;DllUnregisterServer			PRIVATE
+			;CreateInstallInterface
+			
+			Register
+			Unregister
+			GetAvailableStreams
+			AddStream
+			ShowStream
+			GetArchivePath
+			FreeMemory
+			SetArchivePath
+			SetBridgeForConfigure

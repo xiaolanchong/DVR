@@ -1,0 +1,15 @@
+
+EXPORTS
+	Debug	                 PRIVATE
+	
+	CreateVideoConfig
+	GetAllIPAddresses
+	GetAllCameras
+	
+	CreateDBServer
+	CreateDBClient
+	CreateDBInstaller
+	
+	CreateVideoSystemConfig
+	CreateClientVideoSystemConfig
+	CreateServerVideoSystemConfig

@@ -1,0 +1,218 @@
+<!-- 
+	Description: 	DVR build file for Ant 1.6.5 
+	Author:		 	Eugene Gorbachev
+	Create:			2006-03-02
+	Last modified:	2006-03-02
+	Changelog:
+-->
+<project name="DVR" default="usage" basedir=".">
+    <description>
+        simple example build file
+    </description>
+  <!-- set global properties for this build -->
+ 
+  <property name="client_dir" location="DVRClient\trunk" />
+  <property name="client_res_dir" location="${client_dir}/res"/>
+ 
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+  </target>
+  
+  <target name="usage">
+  	<fail message="usage: ant debug " />
+  </target>
+
+<!-- ****************************************************************************************** -->
+  <target name="debug" depends="set_debug_dir,  set_dir, copy_debug_files, create_client_res" />
+  
+  <target name="release" depends="set_release_dir,  set_dir, copy_release_files, create_client_res" />
+
+<!-- ****************************************************************************************** -->
+  
+  <target name="set_debug_dir">
+  	<property name="base_output_dir" 	location="_bin\debug\" 					/>
+  </target>
+  
+  <target name="set_release_dir">
+  	<property name="base_output_dir" 	location="_bin\release\" 					/>
+  </target>
+  
+  <target name="set_dir">
+   	<property name="bin_dir" 			location="${base_output_dir}\bin"		/>
+   	<property name="pdb_dir" 			location="${base_output_dir}\pdb"		/>
+   	<property name="resource_dir" 		location="${bin_dir}\res"				/>	
+  	<property name="resource_client_dir" 	location="${resource_dir}\DVRClient"	/>
+  </target>
+  
+<!-- ****************************************************************************************** --> 
+
+  <target name="copy_debug_files" depends="init, set_debug_dir, set_dir" >	
+  	<copy todir="${bin_dir}" 	file="chcsva\_bin\debug\chcsva.dll" />
+  	<copy todir="${pdb_dir}" 	file="chcsva\_bin\debug\chcsva.pdb" />
+  	
+  	<copy todir="${bin_dir}" 	file="DVRBackup\trunk\Debug\DVRBackup.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVRBackup\trunk\Debug\DVRBackup.pdb" />
+
+  	<copy todir="${bin_dir}" 	file="DVRDBBridge\trunk\__Debug\DVRDBBridge.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVRDBBridge\trunk\__Debug\DVRDBBridge.pdb" />
+  
+  	<copy todir="${bin_dir}" 	file="DVREngine\trunk\__Debug\DVREngine.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVREngine\trunk\__Debug\DVREngine.pdb" />
+  	
+  	<copy todir="${bin_dir}" 	file="DVRClient\trunk\__Debug\DVRClient.exe" />
+  	<copy todir="${pdb_dir}" 	file="DVRClient\trunk\__Debug\DVRClient.pdb" />
+
+  	<copy todir="${bin_dir}" 	file="DVRRender\OGLRender\Debug\OGLRenderd.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVRRender\OGLRender\Debug\OGLRender.pdb" /> 
+  	
+    <copy todir="${bin_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270d_vc_custom.dll" />
+  	<copy todir="${pdb_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270d_vc_custom.pdb" />	
+  	
+  	<copy todir="${bin_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270d_gl_vc_custom.dll" />
+  	<copy todir="${pdb_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270d_gl_vc_custom.pdb" />		
+  	
+  </target>
+  
+  <target name="copy_release_files" depends="init, set_release_dir, set_dir" >	
+  	<copy todir="${bin_dir}" 	file="chcsva\_bin\release\chcsva.dll" />
+  	<copy todir="${pdb_dir}" 	file="chcsva\_bin\release\chcsva.pdb" />
+  	
+  	<copy todir="${bin_dir}" 	file="DVRBackup\trunk\Release\DVRBackup.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVRBackup\trunk\Release\DVRBackup.pdb" />
+
+  	<copy todir="${bin_dir}" 	file="DVRDBBridge\trunk\__Release\DVRDBBridge.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVRDBBridge\trunk\__Release\DVRDBBridge.pdb" />
+  
+  	<copy todir="${bin_dir}" 	file="DVREngine\trunk\__Release\DVREngine.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVREngine\trunk\__Release\DVREngine.pdb" />
+  	
+  	<copy todir="${bin_dir}" 	file="DVRClient\trunk\__Release\DVRClient.exe" />
+  	<copy todir="${pdb_dir}" 	file="DVRClient\trunk\__Release\DVRClient.pdb" />
+
+  	<copy todir="${bin_dir}" 	file="DVRRender\OGLRender\Release\OGLRender.dll" />
+  	<copy todir="${pdb_dir}" 	file="DVRRender\OGLRender\Release\OGLRender.pdb" /> 
+  	
+    <copy todir="${bin_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270_vc_custom.dll" />
+  	<copy todir="${pdb_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270_vc_custom.pdb" />	
+  	
+  	<copy todir="${bin_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270_gl_vc_custom.dll" />
+  	<copy todir="${pdb_dir}" 	file="..\3rd_party\wxWidgets-2.7.0\lib\vc_dll\wxmsw270_gl_vc_custom.pdb" />		
+  	
+  </target>  
+  
+<!-- ****************************************************************************************** -->  
+  
+  <target name="create_client_res"  depends="copy_res_and_extract_string, create_string_template, create_locale_strings" />
+  
+  <target name="copy_res_and_extract_string">
+    <mkdir dir="${resource_dir}" />
+    <tempfile property="temp.ui_strings" />
+    
+    <!-- transform DVRClient xml resource and put it to the 'Generated' dir (for *nix systems)
+    	use jscript & MSXML for xml parsing
+    -->
+    
+  	<exec executable="cscript" >
+  		<arg value="//nologo" />
+  		<arg file="${client_dir}/Transform.js" />
+  		<arg file="${client_dir}/res/DVRClient_wdr.xrc" />
+  		<arg file="${client_dir}/res/DVRClient.xrc" />
+  		<arg file="${temp.ui_strings}" />
+  	</exec>
+  	
+  	<copy file="${client_dir}/res/DVRClient.xrc" todir="${resource_client_dir}" />
+  	
+  	<!-- copy all wxDesigner images -->
+  	<copy todir="${resource_client_dir}/DVRClient_wdr" >
+  		<fileset dir="${client_dir}/res/DVRClient_wdr" casesensitive="no">
+  			<include name="*.*"/>
+		</fileset>
+  	</copy>
+  	
+  	<!-- copy mode tabs images (video, archive etc.) -->
+  	<copy todir="${resource_client_dir}/ModeTabs" >
+  	  	<fileset dir="${client_dir}\res\ModeTabs" casesensitive="no">
+  			<include name="*.*"/>
+		</fileset>
+	</copy>
+  </target>
+ 
+  <!-- create i18n template - extract strings from *.cpp sources and 
+       concatinate it with the xrc extracted strings -->
+      
+   <target name = "create_string_template" depends="copy_res_and_extract_string">
+   <tempfile property="temp.srcfilelist" />
+   <tempfile property="temp.xgettext_strings" />
+   <tempfile property="temp.merged_strings" />
+   
+   <!-- get list of all source files -->
+   <exec executable="cmd"  output="${temp.srcfilelist}"  >
+   		<arg line="/c dir"/>
+   		<arg file="${client_dir}/*.h" />
+   		<arg file="${client_dir}/*.cpp" />
+   		<arg line="/b /s"/>
+   </exec>
+   
+   <exec executable="utility/gettext/xgettext"  >
+   		<arg line="--omit-header -o"/>
+   		<arg file="${temp.xgettext_strings}" />
+   		<arg line="--files-from=${temp.srcfilelist}" />
+   		<arg line="--keyword=_"/>
+   </exec>
+   
+   <!-- concat with xrc resource strings -->
+   <exec executable="utility/gettext/msgcat"   >
+   		<arg file="${temp.ui_strings}" />
+   		<arg file="${temp.xgettext_strings}" />
+   		<arg value="-o" />
+   		<arg file="${temp.merged_strings}" />
+   </exec>
+   
+   <property name="locale_name" value="ru"/>
+
+   
+   </target>
+
+   <!-- create .po file for every language, currently only for ru -->
+   <target name="create_locale_strings" depends="create_string_template">
+   
+   <mkdir dir="${resource_client_dir}/${locale_name}"/>
+   
+   <exec executable="utility/gettext/msgmerge" >
+   		<arg file="${client_res_dir}/Generated/${locale_name}/DVRClient.po"/>
+   		<arg file="${temp.merged_strings}" />
+   		<arg value="-U" />
+   </exec>
+
+   <exec executable="utility/gettext/msgfmt" >
+   		<arg file="${client_res_dir}/Generated/${locale_name}/DVRClient.po"/>
+   		<arg value="-o" />
+   		<arg file="${client_res_dir}/Generated/${locale_name}/DVRClient.mo" />
+   </exec>   
+  
+  <copy file="${client_res_dir}/Generated/${locale_name}/DVRClient.mo" todir="${resource_client_dir}/${locale_name}" />  
+     
+  <!-- delete temporary files -->
+  <delete verbose="true">
+  	<fileset file="${temp.ui_strings}" />
+  </delete>
+  
+  <delete verbose="true">
+  	<fileset file="${temp.srcfilelist}" />
+  </delete>
+  
+  <delete verbose="true">
+  	<fileset file="${temp.xgettext_strings}" />
+  </delete>
+  
+  <delete verbose="true">
+  	<fileset file="${temp.merged_strings}" />
+  </delete>
+  
+  </target> 
+
+  <target name="clean" description="clean up" >
+    <delete dir="${base_output_dir}"/>
+  </target>
+</project>

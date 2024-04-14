@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<resource version="2.5.3.0">
+	<object class="wxPanel" name="Tab_Video">
+		<object class="wxBoxSizer">
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxGROW|wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxGROW|wxALIGN_CENTER_HORIZONTAL</flag>
+								<border>5</border>
+								<object class="wxPanel" name="ID_PANEL">
+									<size>170,160</size>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_BOTTOM</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxToolBar" name="ToolBar_ViewMode">
+									<margins>0,0</margins>
+									<bitmapsize>32,32</bitmapsize>
+									<object class="tool" name="ToolButton_ViewMode_1">
+										<bitmap>DVRClient_wdr/ViewMode_1.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_2">
+										<bitmap>DVRClient_wdr/ViewMode_2.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_3">
+										<bitmap>DVRClient_wdr/ViewMode_3.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_4">
+										<bitmap>DVRClient_wdr/ViewMode_4.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_5">
+										<bitmap>DVRClient_wdr/ViewMode_5.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_6">
+										<bitmap>DVRClient_wdr/ViewMode_6.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="separator">
+									</object>
+									<object class="tool" name="ToolButton_StretchMode_1">
+										<bitmap>DVRClient_wdr/WindowSize_2.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_StretchMode_2">
+										<bitmap>DVRClient_wdr/WindowSize_1.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_StretchMode_3">
+										<bitmap>DVRClient_wdr/WindowSize_0.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxToolBar" name="ToolBar_Video_Settings">
+									<margins>0,0</margins>
+									<bitmapsize>32,32</bitmapsize>
+									<object class="tool" name="ToolButton_ViewMode_FullScreen">
+										<bitmap>DVRClient_wdr/ViewMode_0.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="separator">
+									</object>
+									<object class="tool" name="ToolButton_Video_Settings">
+										<bitmap>DVRClient_wdr/Video1_4.png</bitmap>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxPanel" name="Tab_Archive">
+		<object class="wxBoxSizer">
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxGROW|wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxGROW|wxALIGN_CENTER_HORIZONTAL</flag>
+								<border>5</border>
+								<object class="wxPanel" name="ID_PANEL">
+									<size>170,160</size>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxToolBar" name="ToolBar_Archive_VideoControl">
+									<margins>0,0</margins>
+									<bitmapsize>24,24</bitmapsize>
+									<object class="tool" name="ToolButton_VideoControl_Play">
+										<bitmap>DVRClient_wdr/VideoControl_1.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_VideoControl_Pause">
+										<bitmap>DVRClient_wdr/VideoControl_4.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_VideoControl_Stop">
+										<bitmap>DVRClient_wdr/VideoControl_5.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="unknown" name="Seeker_Archive">
+									<size>100,20</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="Static_ArchiveTime">
+									<label>##:##:## ##.##.##</label>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_BOTTOM</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxToolBar" name="ToolBar_ViewMode">
+									<margins>0,0</margins>
+									<bitmapsize>32,32</bitmapsize>
+									<object class="tool" name="ToolButton_ViewMode_1">
+										<bitmap>DVRClient_wdr/ViewMode_1.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_2">
+										<bitmap>DVRClient_wdr/ViewMode_2.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_3">
+										<bitmap>DVRClient_wdr/ViewMode_3.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_4">
+										<bitmap>DVRClient_wdr/ViewMode_4.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_5">
+										<bitmap>DVRClient_wdr/ViewMode_5.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_ViewMode_6">
+										<bitmap>DVRClient_wdr/ViewMode_6.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="separator">
+									</object>
+									<object class="tool" name="ToolButton_StretchMode_1">
+										<bitmap>DVRClient_wdr/WindowSize_2.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_StretchMode_2">
+										<bitmap>DVRClient_wdr/WindowSize_1.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+									<object class="tool" name="ToolButton_StretchMode_3">
+										<bitmap>DVRClient_wdr/WindowSize_0.png</bitmap>
+										<toggle>1</toggle>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxGROW|wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Archive settings</label>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER|wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="ID_TEXT">
+											<label>Archive time</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER|wxALL</flag>
+										<border>5</border>
+										<object class="wxFlexGridSizer">
+											<cols>2</cols>
+											<rows>0</rows>
+											<vgap>0</vgap>
+											<hgap>0</hgap>
+											<growablecols>1</growablecols>
+											<object class="sizeritem">
+												<flag>wxALIGN_CENTER|wxALL</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="ID_TEXT">
+													<label>From</label>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<flag>wxALIGN_CENTER|wxALL</flag>
+												<border>5</border>
+												<object class="unknown" name="DateTimeCtrl_ArchiveStartTime">
+													<size>150,25</size>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<flag>wxALIGN_CENTER|wxALL</flag>
+												<border>5</border>
+												<object class="wxStaticText" name="ID_TEXT">
+													<label>To</label>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<flag>wxALIGN_CENTER|wxALL</flag>
+												<border>5</border>
+												<object class="unknown" name="DateTimeCtrl_ArchiveEndTime">
+													<size>150,25</size>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER|wxALL</flag>
+										<border>5</border>
+										<object class="wxButton" name="Button_Start">
+											<label>Start</label>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="unknown" name="ScheduleControl_Archive">
+							<size>100,100</size>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Dlg_Settings">
+		<title>System settings</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Archive erasing's settings</label>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>0</rows>
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<growablecols>1</growablecols>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ID_TEXT">
+									<label>Start erasing, when percentage free disk space less then</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxSpinCtrl" name="ID_SPINCTRL">
+									<size>100,-1</size>
+									<max>100</max>
+									<value>0</value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ID_TEXT">
+									<label>End erasing when percentage free disk space more then</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxSpinCtrl" name="ID_SPINCTRL">
+									<size>100,-1</size>
+									<max>100</max>
+									<value>0</value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ID_TEXT">
+									<label>Keep archive for days</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxSpinCtrl" name="ID_SPINCTRL">
+									<size>100,-1</size>
+									<max>100</max>
+									<value>0</value>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Archive record's settings</label>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxRadioButton" name="ID_RADIOBUTTON">
+							<label>Always</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxRadioButton" name="ID_RADIOBUTTON">
+							<label>Only when a motion has been detected</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxRadioButton" name="ID_RADIOBUTTON">
+							<label>Never</label>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="ID_TEXT">
+							<label>Motion detection sensitivity</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxSlider" name="ID_SLIDER">
+							<size>170,-1</size>
+							<style>wxSL_HORIZONTAL|wxSL_LABELS</style>
+							<max>100</max>
+							<value>0</value>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER|wxALL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>OK</label>
+							<default>1</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxToolBar" name="ToolBar_SelectMode">
+		<margins>2,2</margins>
+		<bitmapsize>16,15</bitmapsize>
+		<object class="tool" name="ID_TOOL">
+			<toggle>1</toggle>
+		</object>
+		<object class="tool" name="ID_TOOL">
+			<toggle>1</toggle>
+		</object>
+	</object>
+	<object class="wxToolBar" name="ToolBar_MainMode">
+		<margins>2,2</margins>
+		<bitmapsize>32,32</bitmapsize>
+		<object class="separator">
+		</object>
+		<object class="tool" name="ToolButton_Mode_Video">
+			<bitmap>DVRClient_wdr/MainMode_0.png</bitmap>
+			<toggle>1</toggle>
+		</object>
+		<object class="tool" name="ToolButton_Mode_Archive">
+			<bitmap>DVRClient_wdr/MainMode_1.png</bitmap>
+			<toggle>1</toggle>
+		</object>
+		<object class="tool" name="ToolButton_Mode_Log">
+			<bitmap>DVRClient_wdr/MainMode_0.png</bitmap>
+			<toggle>1</toggle>
+		</object>
+	</object>
+</resource>

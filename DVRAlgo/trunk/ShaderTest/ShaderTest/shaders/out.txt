@@ -1,0 +1,63 @@
+shader.cg
+52 lines, 0 errors.
+// transl output by Cg compiler
+// cgc version 1.5.0006, build date Apr  3 2006 11:34:18
+// command line args: -profile glslf -oglsl
+// source file: shader.cg
+//vendor NVIDIA Corporation
+//version 1.5.0.6
+//profile glslf
+//program fragment_main
+//semantic constantColor
+//semantic kernel
+//semantic g_mWorldViewProjection : WORLDVIEWPROJECTION
+//semantic diffuseMap
+//var float4 constantColor :  :  : -1 : 0
+//var float1 kernel :  :  : -1 : 0
+//var float4x4 g_mWorldViewProjection : WORLDVIEWPROJECTION : , 4 : -1 : 0
+//var sampler2D diffuseMap :  : pend_s2_diffuseMap : -1 : 1
+//var float4 OUT.position : $vin.POSITION :  : 0 : 0
+//var float4 OUT.color : $vin.COLOR :  : 0 : 0
+//var float2 OUT.texcoord : $vin.TEXCOORD : TEXCOORD : 0 : 1
+//var float4 fragment_main : $vout.COLOR : COLOR : -1 : 1
+
+struct output {
+    vec4 pend_color;
+    vec2 pend_texcoord;
+};
+
+struct input {
+    vec2 pend_texcoord;
+};
+
+vec4 dash9_pend_s3_blurImage_0001;
+int dash1_pend_s3_i_0001;
+int dash1_pend_s3_j_0001;
+vec2 dash8_pend_s3_texCoord_0001;
+vec4 cash0_pend_s3__temp0004;
+vec4 pend_s3_ret_0;
+uniform sampler2D pend_s2_diffuseMap;
+
+ // main procedure, the original name was fragment_main
+void main()
+{
+
+    struct output pend_s4_OUT;
+
+    pend_s4_OUT.pend_texcoord = gl_TexCoord[0].xy;
+    dash9_pend_s3_blurImage_0001 = vec4( 0.0, 0.0, 0.0, 0.0);
+    for (dash1_pend_s3_i_0001 = -7; dash1_pend_s3_i_0001 <= 7; dash1_pend_s3_i_0001 = dash1_pend_s3_i_0001 + 1) { // for begin
+        { // block begin
+            for (dash1_pend_s3_j_0001 = -7; dash1_pend_s3_j_0001 <= 7; dash1_pend_s3_j_0001 = dash1_pend_s3_j_0001 + 1) { // for begin
+                { // block begin
+                    dash8_pend_s3_texCoord_0001 = pend_s4_OUT.pend_texcoord + vec2(float(dash1_pend_s3_i_0001), float(dash1_pend_s3_j_0001))/128.0;
+                    cash0_pend_s3__temp0004 = texture2D(pend_s2_diffuseMap, dash8_pend_s3_texCoord_0001);
+                    dash9_pend_s3_blurImage_0001 = dash9_pend_s3_blurImage_0001 + 0.00444444*cash0_pend_s3__temp0004 + vec4( 0.000444444, 0.000444444, 0.000444444, 0.000444444);
+                } // end block
+            } // end for
+        } // end block
+    } // end for
+    pend_s3_ret_0 = dash9_pend_s3_blurImage_0001;
+    gl_FragColor = pend_s3_ret_0;
+    return;
+} // main end

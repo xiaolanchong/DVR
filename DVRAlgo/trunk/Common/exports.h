@@ -1,0 +1,8 @@
+#include "../../../Shared/ALib/utility.h"
+#include "../../../Shared/Interfaces/i_event.h"
+#include "../../../Shared/common/abstract_menu.h"
+#include "transferable_types.h"
+#include "../../../Shared/Interfaces/i_data_transfer.h"
+#include "../../../Shared/Interfaces/i_camera_analyzer.h"
+#include "../../../Shared/Interfaces/i_hall_analyzer.h"
+#include "exportable_functions.h"

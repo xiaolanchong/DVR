@@ -1,0 +1,78 @@
+(0) : fatal error C9999: bad arguments
+
+usage: cgc [-quiet] [-nocode] [-nostdlib] [-[no]fx] [-longprogs] [-v] [-strict] [-oglsl]
+           [-glslWerror] [-Dmacro[=value]] [-Iinclude_dir] [-profile id]
+           [-entry id | -noentry] [-profileopts opt1,opt2,...] [-o ofile] [-l lfile]
+           [-[no]fastmath] [-[no]fastprecision] [-maxunrollcount N]
+           [-unroll (all|none|count=N)] [-ifcvt (all|none|count=N)]
+           [-type <type definition>} [-typefile <file>}
+           {file.cg}
+supported profiles and their supported profileopts:
+    glslf     profileopts:
+    glslv     profileopts:
+    ps_1_3    profileopts:
+        MaxPixelShaderValue=<val>
+    ps_1_2    profileopts:
+        MaxPixelShaderValue=<val>
+    ps_1_1    profileopts:
+        MaxPixelShaderValue=<val>
+    dx8ps     profileopts:
+        MaxPixelShaderValue=<val>
+    fp20      profileopts:
+    generic   profileopts:
+    ps_3_0    profileopts:
+    fp40      profileopts:
+        NumTemps=<val>
+        NumInstructionSlots=<val>
+        OutColorPrec=<val>
+        MaxLocalParams=<val>
+    vs_3_0    profileopts:
+        MaxLocalParams=<n>
+        MaxInstructions=<n>
+    vp40      profileopts:
+        NumTemps=<val>
+        NumInstructionSlots=<val>
+        MaxLocalParams=<val>
+    arbfp1    profileopts:
+        NumTemps=<val>
+        NumInstructionSlots=<val>
+        NoDependentReadLimit=<val>
+        NumTexInstructionSlots=<val>
+        NumMathInstructionSlots=<val>
+        MaxTexIndirections=<val>
+        MaxDrawBuffers=<val>
+        MaxLocalParams=<val>
+    ps_2_x    profileopts:
+        NumTemps=<val>
+        NumInstructionSlots=<val>
+        Predication=<val>
+        ArbitrarySwizzle=<val>
+        GradientInstructions=<val>
+        NoDependentReadLimit=<val>
+        NoTexInstructionLimit=<val>
+    ps_2_0    profileopts:
+    dx9ps2    profileopts:
+    fp30unlimited profileopts:
+    fp30      profileopts:
+        NumInstructionSlots=<val>
+        NumTemps=<val>
+    vs_2_x    profileopts:
+        DynamicFlowControlDepth=<0 or 24>
+        NumTemps=<12 to 32>
+        MaxLocalParams=<n>
+    vs_2_0    profileopts:
+        MaxLocalParams=<n>
+    dxvs2     profileopts:
+        MaxLocalParams=<n>
+    arbvp1    profileopts:
+        NumTemps=<12 to 32>
+        MaxInstructions=<n>
+        MaxLocalParams=<n>
+    vs_1_1    profileopts:
+        dcls
+        MaxLocalParams=<n>
+    dx8vs     profileopts:
+        dcls
+        MaxLocalParams=<n>
+    vp20      profileopts:
+    vp30      profileopts:

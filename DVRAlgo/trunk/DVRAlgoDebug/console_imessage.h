@@ -1,0 +1,29 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// console_message.h
+// ---------------------
+// begin     : 2006
+// modified  : 24 Jan 2006
+// author(s) : Albert Akhriev
+// email     : Albert.Akhriev@biones.com
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __DEFINE_ELVEES_CONSOLE_IMESSAGE_H__
+#define __DEFINE_ELVEES_CONSOLE_IMESSAGE_H__
+
+namespace Elvees
+{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// \class ConsoleMessage.
+/// \brief Implementation of 'Elvees::IMessage' interface that prints into console.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+class ConsoleMessage : public Elvees::IMessage
+{
+public:
+  virtual void Print( sint messageType, const char * szMessage );
+};
+
+} // namespace Elvees
+
+#endif // __DEFINE_ELVEES_CONSOLE_IMESSAGE_H__
+

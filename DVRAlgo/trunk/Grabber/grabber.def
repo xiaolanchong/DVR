@@ -1,0 +1,4 @@
+EXPORTS
+	CreateChcsvaCameraGrabber
+	DeleteChcsvaCameraGrabber
+    GetNumberOfAvailablesCameras

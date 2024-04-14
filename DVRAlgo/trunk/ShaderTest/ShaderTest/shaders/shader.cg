@@ -1,0 +1,66 @@
+
+float4 BlurKernel( uniform samplerRECT image, float2 texcoord )
+{
+  float4 blurImage = float4(0,0,0,0);
+  int k = 1;
+  float w = 1.0 / ((2 * k + 1 ) * (2 * k + 1 ) );
+	for ( int i = -k; i <= k; i++ ) 
+	{
+		for ( int j = -k; j <= k; j++) 
+		{
+			float2 texCoord = texcoord + float2(i, j) / 512;			
+			blurImage += w * texRECT( image, texCoord );
+		}
+	}
+	/*
+	if( blurImage.b > 0.5 )
+	{
+		blurImage = float4(0,0,blurImage.b,0);
+	}*/
+	return blurImage;
+}
+
+
+struct FragmentProgramInput
+{
+  float4 position : POSITION;
+  float4 color : COLOR;
+  float2 texcoord : TEXCOORD;
+};
+
+
+float4 background_accumulation ( FragmentProgramInput IN, 
+uniform samplerRECT videoFrame,
+uniform samplerRECT background,
+uniform samplerRECT motionMap ): COLOR
+{	
+	float3 crntFrame = texRECT( videoFrame, IN.texcoord ).rgb ;
+	float3 bgrnd = texRECT( background, IN.texcoord ).rgb;
+	float3 diff = crntFrame - bgrnd;
+
+	float3 motion = texRECT( motionMap, IN.texcoord ).rgb;
+	float3 output;
+	const float alpha = 0.1;
+	const float motionAlpha = 0.05;
+	
+	if( motion.r < 0.5 )
+		output = alpha * crntFrame + (1.0 - alpha) * bgrnd;
+	else
+		output = motionAlpha * crntFrame + (1.0 - motionAlpha) * bgrnd;
+
+	return float4(output, 1.0);
+}
+
+
+float4 motion_detection ( FragmentProgramInput IN, 
+uniform samplerRECT videoFrame,
+uniform samplerRECT background ): COLOR
+{	
+	float3 crntFrame = texRECT( videoFrame, IN.texcoord ).rgb ;
+	float3 bgrnd = texRECT( background, IN.texcoord ).rgb;
+	float3 diff = crntFrame - bgrnd;
+	
+	float res = length( diff ) * 5.0; 
+
+	return float4(res, crntFrame.yz, 1.0);
+}

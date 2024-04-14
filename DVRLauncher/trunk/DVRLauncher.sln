@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRLauncher", "DVRLauncher.vcproj", "{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release|Win32 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
