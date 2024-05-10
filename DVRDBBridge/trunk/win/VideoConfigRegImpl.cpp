@@ -28,10 +28,10 @@ VideoConfigRegImpl::VideoConfigRegImpl():
 {
 	std::tstring sMain = GetRegistryPath();
 	RegAssign<DBBridge::IVideoConfig::NoSuchProperty> res;
-	DWORD res1st = m_pkeyMain->Open( HKEY_LOCAL_MACHINE, sMain.c_str() );
+	DWORD res1st = m_pkeyMain->Open( HKEY_LOCAL_MACHINE, sMain.c_str(), KEY_READ);
 	if( ERROR_SUCCESS != res1st )
 	{
-		res = m_pkeyMain->Create( HKEY_LOCAL_MACHINE, sMain.c_str() );
+		res = m_pkeyMain->Create( HKEY_LOCAL_MACHINE, sMain.c_str());
 	}
 }
 
@@ -45,7 +45,7 @@ boost::shared_ptr<CRegKey>	VideoConfigRegImpl::OpenKey( LPCTSTR szKeyName )
 	if( szKeyName && _tcslen( szKeyName ) )
 	{
 		boost::shared_ptr<CRegKey> pkeyTemp( new CRegKey );
-		res = pkeyTemp->Open( *m_pkeyMain, szKeyName );  
+		res = pkeyTemp->Open( *m_pkeyMain, szKeyName, KEY_READ );  
 		return pkeyTemp;
 	}
 	else return m_pkeyMain;
@@ -103,8 +103,9 @@ void	VideoConfigRegImpl::GetValue( LPCTSTR szPath, LPCTSTR szName, std::vector<B
 //	try {
 	///*OutputDebugStringA( (*/boost::format("[size] = %u\n") % dwSize/*).str().c_str() )*/;
 	binValue.resize(dwSize);
-	
-	res = pkeyValue->QueryBinaryValue( szName, &binValue[0], &dwSize );
+
+	if (dwSize > 0)
+		res = pkeyValue->QueryBinaryValue( szName, &binValue[0], &dwSize );
 /*	}
 	catch(...)
 	{

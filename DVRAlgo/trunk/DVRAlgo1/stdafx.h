@@ -22,12 +22,26 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <locale>
+#if 1
 #include <boost/shared_ptr.hpp>
 #include <boost/thread/thread.hpp>
 #include <boost/thread/mutex.hpp>
 #include <boost/pool/pool.hpp>
 #include <boost/pool/singleton_pool.hpp>
 #include <boost/pool/pool_alloc.hpp>
+#else
+#include <memory>
+#include <thread>
+#include <mutex>
+namespace boost = std;
+#endif
+
+#include <winsdkver.h>
+
+#define VC_EXTRALEAN
+#define WINVER _WIN32_MAXVER
+
+#include <windows.h>
 
 #pragma warning( pop )
 //lint -w2

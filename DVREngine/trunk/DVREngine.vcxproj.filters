@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{78020ab4-27ef-43bf-8d3d-0b74d7984257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{a94a52e9-e6e4-4406-bd37-e6abbf715c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\message">
+      <UniqueIdentifier>{2823775d-6509-4a1f-abb2-f90e2e8e3b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\grabber">
+      <UniqueIdentifier>{39801e28-da87-46d4-9b54-2885a3867669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\stub">
+      <UniqueIdentifier>{2244d398-563d-4d53-835f-909f37950cab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\state">
+      <UniqueIdentifier>{f6ab73c5-3f84-4a1a-8d65-56cf7614b592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Client">
+      <UniqueIdentifier>{0c8b4c99-7791-4300-8582-3216cb3b8193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e8237445-9771-4a9c-bbf3-8eb3085dcf21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tier">
+      <UniqueIdentifier>{6ceb0f92-ebc5-4bf6-a06b-8d70fb482f10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExceptionHandler">
+      <UniqueIdentifier>{e49f68c7-c747-42ea-9efb-c30fae49f64e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="win\DebugServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DVREngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ActivityRecord.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\AlarmInfo.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\AnalyzeThread.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\BackupImpl.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\BaseQueueThread.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\CameraData.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\CameraServer.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\CameraThread.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\FpsLogger.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\GlobalTimer.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\HallThread.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\IArchiveUserData.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ImageProcessPause.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\MessageImpl.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\MessageStdOut.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\MilliSecTimer.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\PlatSleep.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ServerImpl.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\SingleInstanceSentry.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="server\message\MessageQueue.cpp">
+      <Filter>Server\message</Filter>
+    </ClCompile>
+    <ClCompile Include="server\message\MsgCameraResponseData.cpp">
+      <Filter>Server\message</Filter>
+    </ClCompile>
+    <ClCompile Include="server\message\MsgCameraSetHallData.cpp">
+      <Filter>Server\message</Filter>
+    </ClCompile>
+    <ClCompile Include="server\message\MsgHallRequestAlarmData.cpp">
+      <Filter>Server\message</Filter>
+    </ClCompile>
+    <ClCompile Include="server\message\MsgHallResponseAlarmData.cpp">
+      <Filter>Server\message</Filter>
+    </ClCompile>
+    <ClCompile Include="server\message\MsgHallSetCameraData.cpp">
+      <Filter>Server\message</Filter>
+    </ClCompile>
+    <ClCompile Include="server\grabber\ServerFakeReader.cpp">
+      <Filter>Server\grabber</Filter>
+    </ClCompile>
+    <ClCompile Include="server\grabber\ServerVideoFactory.cpp">
+      <Filter>Server\grabber</Filter>
+    </ClCompile>
+    <ClCompile Include="server\grabber\ServerVideoReader.cpp">
+      <Filter>Server\grabber</Filter>
+    </ClCompile>
+    <ClCompile Include="server\stub\CameraAnalyzerStub.cpp">
+      <Filter>Server\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="server\stub\HallAnalyzerStub.cpp">
+      <Filter>Server\stub</Filter>
+    </ClCompile>
+    <ClCompile Include="server\state\ServerThreadDBConnection.cpp">
+      <Filter>Server\state</Filter>
+    </ClCompile>
+    <ClCompile Include="server\state\ServerThreadGathering.cpp">
+      <Filter>Server\state</Filter>
+    </ClCompile>
+    <ClCompile Include="server\state\ServerThreadState.cpp">
+      <Filter>Server\state</Filter>
+    </ClCompile>
+    <ClCompile Include="client\ClientImpl.cpp">
+      <Filter>Client</Filter>
+    </ClCompile>
+    <ClCompile Include="common\EngineSettingsImpl.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Timer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="server\tier\ClientServerTier.cpp">
+      <Filter>tier</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DVREngine.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DVREngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\EngineSettings.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IArchiveUserData.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IClient.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IServer.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ActivityRecord.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\AlarmInfo.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\AnalyzeThread.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\BackupImpl.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\BaseQueueThread.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\CameraData.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\CameraServer.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\CameraThread.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\FpsLogger.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\GlobalTimer.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\HallThread.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ImageProcessPause.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\MessageImpl.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\MessageStdOut.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\MilliSecTimer.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\PlatSleep.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerImpl.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\SingleInstanceSentry.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\BaseMessageProcessor.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\IMessageDispatcher.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\IMessageProcessor.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\IMessageStream.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\IThreadMessage.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\MessageQueue.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\MsgCameraResponseData.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\MsgCameraSetHallData.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\MsgHallRequestAlarmData.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\MsgHallResponseAlarmData.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\message\MsgHallSetCameraData.h">
+      <Filter>Server\message</Filter>
+    </ClInclude>
+    <ClInclude Include="server\grabber\IVideoProvider.h">
+      <Filter>Server\grabber</Filter>
+    </ClInclude>
+    <ClInclude Include="server\grabber\ServerFakeReader.h">
+      <Filter>Server\grabber</Filter>
+    </ClInclude>
+    <ClInclude Include="server\grabber\ServerVideoFactory.h">
+      <Filter>Server\grabber</Filter>
+    </ClInclude>
+    <ClInclude Include="server\grabber\ServerVideoReader.h">
+      <Filter>Server\grabber</Filter>
+    </ClInclude>
+    <ClInclude Include="server\stub\CameraAnalyzerStub.h">
+      <Filter>Server\stub</Filter>
+    </ClInclude>
+    <ClInclude Include="server\stub\HallAnalyzerStub.h">
+      <Filter>Server\stub</Filter>
+    </ClInclude>
+    <ClInclude Include="server\state\ServerThreadDBConnection.h">
+      <Filter>Server\state</Filter>
+    </ClInclude>
+    <ClInclude Include="server\state\ServerThreadGathering.h">
+      <Filter>Server\state</Filter>
+    </ClInclude>
+    <ClInclude Include="server\state\ServerThreadState.h">
+      <Filter>Server\state</Filter>
+    </ClInclude>
+    <ClInclude Include="client\ClientImpl.h">
+      <Filter>Client</Filter>
+    </ClInclude>
+    <ClInclude Include="common\EngineSettingsImpl.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Timer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="server\tier\ClientServerTier.h">
+      <Filter>tier</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\CommonLibs\HEAD\ExceptionHandler\trunk\ExceptionHandler.h">
+      <Filter>ExceptionHandler</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

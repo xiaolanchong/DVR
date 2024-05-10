@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="win">
+      <UniqueIdentifier>{420707d8-73cd-4664-9aff-3354a48df758}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{a2481e20-715f-406b-bf40-fcaea7afd401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{1f69998e-1458-477a-ae95-519bcfbe7031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{c817eb40-cce5-42b5-ae31-cb607cedf3cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="oledb">
+      <UniqueIdentifier>{1832a6c7-bec9-4545-b6db-81b76d83da7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="chcsva">
+      <UniqueIdentifier>{0554442c-bb17-4946-9743-7386a83f5186}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DVRDBBridge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win\CameraConfigRegImpl.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="win\Debug.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="win\DeviceConfigRegImpl.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="win\RegClientImpl.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="win\RegCommon.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="win\RegServerImpl.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="win\VideoConfigRegImpl.cpp">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="db\DBClientImpl.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="db\DBMode.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="db\DBServerImpl.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CommonUtility.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DBVideoConfig\trunk\testDB\CCameraConfig.cpp">
+      <Filter>oledb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DBVideoConfig\trunk\testDB\CDeviceConfig.cpp">
+      <Filter>oledb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DBVideoConfig\trunk\testDB\CFrame.cpp">
+      <Filter>oledb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DBVideoConfig\trunk\testDB\CVideoConfig.cpp">
+      <Filter>oledb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DBVideoConfig\trunk\testDB\ISSHelper.cpp">
+      <Filter>oledb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DBVideoConfig\trunk\testDB\MainFunction.cpp">
+      <Filter>oledb</Filter>
+    </ClCompile>
+    <ClCompile Include="chcsva\VideoSystemConfigBridgeImpl.cpp">
+      <Filter>chcsva</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DVRDBBridge.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DVRDBBridge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="win\CameraConfigRegImpl.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="win\DeviceConfigRegImpl.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="win\RegClientImpl.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="win\RegCommon.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="win\RegServerImpl.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="win\VideoConfigRegImpl.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IDBClient.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IDBInstaller.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IDBServer.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\IVideoConfig.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="interface\VideoConfigHelper.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="db\dbclientimpl.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="db\DBMode.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="db\DBServerImpl.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonUtility.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\EmptyInstaller.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\OwnIPAddress.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\Categories.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\CCameraConfig.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\CDeviceConfig.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\CFrame.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\CVideoConfig.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\ISSHelper.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\MainFunction.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DBVideoConfig\trunk\testDB\strconv.h">
+      <Filter>oledb</Filter>
+    </ClInclude>
+    <ClInclude Include="chcsva\VideoSystemConfigBridgeImpl.h">
+      <Filter>chcsva</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DVRDBBridge.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+/.vs
+/3rd_party/wxWidgets-2.7.0/build/
+/3rd_party/wxWidgets-2.7.0/lib/vc_dll
+/DVRLauncher/trunk/__Unicode Debug/
+/DVRRender/trunk/OGLRender/Debug/
+/InstallHelper/trunk/InstallHelperTest/__Debug/
+/bin/
+/chcsva/trunk/_bin/Debug/
+/chcsva/trunk/_obj
+/chcsva/trunk/chcsva.vcxproj.user
+/DVRAlgo/trunk/DVRAlgo1/__Debug/
+/DVRAlgo/trunk/DVRAlgo1/dvralgo1.vcxproj.user
+/DVRBackup/trunk/Debug
+/DVRClient/trunk/__Debug
+/DVRBackup/trunk/DVRBackup.vcxproj.user
+/DVRClient/trunk/DVRClient.vcxproj.user
+/DVRDBBridge/trunk/__Debug
+/DVREngine/trunk/__Debug
+/DVRClient/trunk/res/DVRClient.xrc
+/DVRDBBridge/trunk/DVRDBBridge.vcxproj.user
+/DVREngine/trunk/DVREngine.vcxproj.user
+/InstallHelper/trunk/__Debug
+/DVRLauncher/BIN/Debug/DVRLauncher.exe
+/DVRLauncher/trunk/DVRLauncher.vcxproj.user
+/DVRRender/trunk/OGLRender/OGLRender.vcxproj.user

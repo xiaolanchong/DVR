@@ -13,6 +13,7 @@
 #ifndef _I_SERVER_9972059635508920_
 #define _I_SERVER_9972059635508920_
 
+#include <stdexcept>
 #include "..\..\..\Shared\Common\ExceptionTemplate.h"
 #include "..\..\..\Shared\Interfaces\i_message.h"
 

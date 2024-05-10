@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{845BF3F0-C005-461A-8BD5-FEE27D625AEF}</ProjectGuid>
+    <RootNamespace>DVRClient</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.34714.143</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>__$(Configuration)\</OutDir>
+    <IntDir>__$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>__$(Configuration)\</OutDir>
+    <IntDir>__$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "../../BIN/Debug/$(TargetFileName)"
+Deploy.bat Debug
+</Command>
+      <Outputs>../../BIN/Debug/$(TargetFileName);../../BIN/Debug/glut32.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\3rd_party\wxWidgets-2.7.0\include\msvc;..\..\3rd_party\wxWidgets-2.7.0\include;../../../../boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WXUSINGDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;Rpcrt4.lib;opengl32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\3rd_party\wxWidgets-2.7.0\lib\vc_dll;../../../../boost_1_84_0/stage/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Command>copy "$(TargetPath)" "../../BIN/Release/$(TargetFileName)"
+copy "$(TargetDir)$(TargetName).pdb" "..\..\bin\release\$(TargetName).pdb"
+Deploy.bat Release
+</Command>
+      <Outputs>../../BIN/Release/$(TargetFileName);../../BIN/Release/glut32.dll;..\..\bin\release\$(TargetName).pdb;../../BIN/Release/glut32.pdb;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\3rd_party\wxWidgets-2.7.0\include\msvc;..\..\3rd_party\wxWidgets-2.7.0\include;../../../../boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;WXUSINGDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;Rpcrt4.lib;opengl32.lib;dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\3rd_party\wxWidgets-2.7.0\lib\vc_dll;../../../../boost_1_84_0/stage/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\CameraCanvas.cpp" />
+    <ClCompile Include="common\CameraFrame.cpp" />
+    <ClCompile Include="common\CameraNaming.cpp" />
+    <ClCompile Include="common\DBHandler.cpp" />
+    <ClCompile Include="common\LayoutKeeper.cpp" />
+    <ClCompile Include="common\layout\LayoutCameraManager.cpp" />
+    <ClCompile Include="common\layout\LayoutIndex.cpp" />
+    <ClCompile Include="common\layout\LayoutManager.cpp" />
+    <ClCompile Include="common\layout\LayoutRect.cpp" />
+    <ClCompile Include="common\layout\ScaleKeepAspectRatio.cpp" />
+    <ClCompile Include="common\layout\ScaleKeepSize.cpp" />
+    <ClCompile Include="common\layout\ScaleStretch.cpp" />
+    <ClCompile Include="common\layout\WeightLayout.cpp" />
+    <ClCompile Include="common\RenderEventHandler.cpp" />
+    <ClCompile Include="main\CommandParam.cpp" />
+    <ClCompile Include="main\MainApp.cpp" />
+    <ClCompile Include="main\MainFrame.cpp" />
+    <ClCompile Include="main\MainNotebook.cpp" />
+    <ClCompile Include="mod_archive\AlarmArchiveData.cpp" />
+    <ClCompile Include="mod_archive\alarmcontrol\AlarmViewControl.cpp" />
+    <ClCompile Include="mod_archive\alarmcontrol\DayTimeLineRender.cpp" />
+    <ClCompile Include="mod_archive\alarmcontrol\HourLineRender.cpp" />
+    <ClCompile Include="mod_archive\alarmcontrol\ITimeLineRender.cpp" />
+    <ClCompile Include="mod_archive\alarmcontrol\MinuteTimeLineRender.cpp" />
+    <ClCompile Include="mod_archive\ArchiveCanvas.cpp" />
+    <ClCompile Include="mod_archive\ArchiveControlPanel.cpp" />
+    <ClCompile Include="mod_archive\ArchiveFrame.cpp" />
+    <ClCompile Include="mod_archive\ArchiveFrameState.cpp" />
+    <ClCompile Include="mod_archive\ArchiveSplitter.cpp" />
+    <ClCompile Include="mod_archive\CameraNumberStatic.cpp" />
+    <ClCompile Include="mod_archive\DateTimeSource.cpp" />
+    <ClCompile Include="mod_archive\VideoSeeker.cpp" />
+    <ClCompile Include="mod_log\HtmlLog.cpp" />
+    <ClCompile Include="mod_log\LogFrame.cpp" />
+    <ClCompile Include="mod_realtime\SettingsDialog.cpp" />
+    <ClCompile Include="mod_realtime\VideoCanvas.cpp" />
+    <ClCompile Include="mod_realtime\VideoFrame.cpp" />
+    <ClCompile Include="server\ServerHandler.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\CommonLibs\HEAD\ExceptionHandler\trunk\ExceptionHandler.h" />
+    <ClInclude Include="common\CameraCanvas.h" />
+    <ClInclude Include="common\CameraFrame.h" />
+    <ClInclude Include="common\CameraNaming.h" />
+    <ClInclude Include="common\DBHandler.h" />
+    <ClInclude Include="common\ICameraName.h" />
+    <ClInclude Include="common\IMenuHandler.h" />
+    <ClInclude Include="common\LayoutKeeper.h" />
+    <ClInclude Include="common\layout\IAreaLayout.h" />
+    <ClInclude Include="common\layout\IAreaScale.h" />
+    <ClInclude Include="common\layout\LayoutCameraManager.h" />
+    <ClInclude Include="common\layout\LayoutIndex.h" />
+    <ClInclude Include="common\layout\LayoutManager.h" />
+    <ClInclude Include="common\layout\LayoutRect.h" />
+    <ClInclude Include="common\layout\ScaleKeepAspectRatio.h" />
+    <ClInclude Include="common\layout\ScaleKeepSize.h" />
+    <ClInclude Include="common\layout\ScaleStretch.h" />
+    <ClInclude Include="common\layout\WeightLayout.h" />
+    <ClInclude Include="common\MessagePluggable.h" />
+    <ClInclude Include="common\RenderEventHandler.h" />
+    <ClInclude Include="main\CommandParam.h" />
+    <ClInclude Include="main\MainFrame.h" />
+    <ClInclude Include="main\MainNotebook.h" />
+    <ClInclude Include="mod_archive\AlarmArchiveData.h" />
+    <ClInclude Include="mod_archive\alarmcontrol\AlarmViewControl.h" />
+    <ClInclude Include="mod_archive\alarmcontrol\DayTimeLineRender.h" />
+    <ClInclude Include="mod_archive\alarmcontrol\HourLineRender.h" />
+    <ClInclude Include="mod_archive\alarmcontrol\ITimeLineRender.h" />
+    <ClInclude Include="mod_archive\alarmcontrol\MinuteTimeLineRender.h" />
+    <ClInclude Include="mod_archive\ArchiveCanvas.h" />
+    <ClInclude Include="mod_archive\ArchiveControlPanel.h" />
+    <ClInclude Include="mod_archive\ArchiveFrame.h" />
+    <ClInclude Include="mod_archive\ArchiveFrameState.h" />
+    <ClInclude Include="mod_archive\ArchiveSplitter.h" />
+    <ClInclude Include="mod_archive\CameraNumberStatic.h" />
+    <ClInclude Include="mod_archive\DateTimeSource.h" />
+    <ClInclude Include="mod_archive\VideoSeeker.h" />
+    <ClInclude Include="mod_log\HtmlLog.h" />
+    <ClInclude Include="mod_log\LogFrame.h" />
+    <ClInclude Include="mod_realtime\SettingsDialog.h" />
+    <ClInclude Include="mod_realtime\VideoCanvas.h" />
+    <ClInclude Include="mod_realtime\VideoFrame.h" />
+    <ClInclude Include="res\Resource.h" />
+    <ClInclude Include="server\ServerHandler.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DVRClient.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\DVRClient.manifest">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\DVRClient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\3rd_party\wxWidgets-2.7.0\wxWidgets-2.7.0.vcxproj">
+      <Project>{70a78b97-9589-4e23-acf3-a7fe2f2f1f3e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\chcsva\trunk\chcsva.vcxproj">
+      <Project>{4d1b1264-9d03-467a-8187-4b66ce08bf6d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DVRDBBridge\trunk\DVRDBBridge.vcxproj">
+      <Project>{339e8209-d198-412e-8a5c-22646786bd60}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DVREngine\trunk\DVREngine.vcxproj">
+      <Project>{37d44f7a-0317-47c9-8aef-2b41512b034e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DVRRender\trunk\OGLRender\OGLRender.vcxproj">
+      <Project>{477e09d3-cf34-4c27-82bd-1f7f0f3cc2ed}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

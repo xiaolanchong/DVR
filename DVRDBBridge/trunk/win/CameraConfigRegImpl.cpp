@@ -46,7 +46,7 @@ CameraConfigRegImpl::CameraConfigRegImpl(LPCTSTR szPath, int nID ):
 	std::tstring s( m_sPath );
 	s += _T("\\");
 	s += boost::lexical_cast<std::tstring>( nID );
-	DWORD dwRes = m_keyCamera.Open( HKEY_LOCAL_MACHINE, s.c_str() );
+	DWORD dwRes = m_keyCamera.Open( HKEY_LOCAL_MACHINE, s.c_str(), KEY_READ );
 	if( dwRes != ERROR_SUCCESS )
 	{
 		throw DBBridge::IVideoConfig::InitFailed("Failed to create/open the registry key");

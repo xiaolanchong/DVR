@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectName>chcsva</ProjectName>
+    <ProjectGuid>{4D1B1264-9D03-467A-8187-4B66CE08BF6D}</ProjectGuid>
+    <RootNamespace>chcsva</RootNamespace>
+    <Keyword>ExtStoredProcProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.34714.143</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\_bin\Debug\</OutDir>
+    <IntDir>.\_obj\Debug\chcsva\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\_bin\Release\</OutDir>
+    <IntDir>.\_obj\Release\chcsva\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>.\_bin\DebugU\</OutDir>
+    <IntDir>.\_obj\DebugU\chcsva\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>.\_bin\ReleaseU\</OutDir>
+    <IntDir>.\_obj\ReleaseU\chcsva\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Message>Copying to common BIN folder</Message>
+      <Command>copy "$(TargetPath)" "..\..\bin\Debug\$(TargetFileName)"
+</Command>
+      <Outputs>..\..\bin\Debug\$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;../../../../3rd_party/dxsdk2004jul/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;CHCSVA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>chcs.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>../../../../boost_1_84_0/stage/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>chcsva.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Message>Copying to common BIN folder</Message>
+      <Command>copy "$(TargetPath)" "..\..\bin\Release\$(TargetFileName)"
+copy "$(TargetDir)$(TargetName).pdb" "..\..\bin\release\$(TargetName).pdb"
+</Command>
+      <Outputs>..\..\bin\Release\$(TargetFileName);..\..\bin\release\$(TargetName).pdb;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;../../../../3rd_party/dxsdk2004jul/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;CHCSVA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>chcs.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>../../../../boost_1_84_0/stage/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>chcsva.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <CustomBuildStep>
+      <Message>Copying to common BIN folder</Message>
+      <Command>copy "$(TargetPath)" "..\..\bin\Debug\$(TargetFileName)"
+</Command>
+      <Outputs>..\..\bin\Debug\$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;../../../../3rd_party/dxsdk2004jul/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;_UNICODE;UNICODE;CHCSVA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>chcs.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>../../../../boost_1_84_0/stage/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>chcsva.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <CustomBuildStep>
+      <Message>Copying to common BIN folder</Message>
+      <Command>copy "$(TargetPath)" "..\..\bin\Release\$(TargetFileName)"
+</Command>
+      <Outputs>..\..\bin\Release\$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;../../../../3rd_party/dxsdk2004jul/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_UNICODE;UNICODE;CHCSVA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>chcs.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalLibraryDirectories>../../../../boost_1_84_0/stage/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>chcsva.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ArchiveClient.h" />
+    <ClInclude Include="ArchiveReader.h" />
+    <ClInclude Include="ArchiveServer.h" />
+    <ClInclude Include="chcs.h" />
+    <ClInclude Include="chcsva.h" />
+    <ClInclude Include="DBAccessors.h" />
+    <ClInclude Include="Device.h" />
+    <ClInclude Include="DlgCompressor.h" />
+    <ClInclude Include="DlgConfigure.h" />
+    <ClInclude Include="DlgShowStream.h" />
+    <ClInclude Include="ext\archive\ArchiveDataExchange.h" />
+    <ClInclude Include="ext\archive\ArchiveWriter.h" />
+    <ClInclude Include="ext\archive\IArchiveStreamFactory.h" />
+    <ClInclude Include="ext\archive\LocalArchiveStream.h" />
+    <ClInclude Include="ext\common\ExceptionHandler.h" />
+    <ClInclude Include="ext\common\FpsLogger.h" />
+    <ClInclude Include="ext\common\TimeFromStartProvider.h" />
+    <ClInclude Include="ext\config\ConfigureRegistryWrapper.h" />
+    <ClInclude Include="ext\config\SystemSettings.h" />
+    <ClInclude Include="ext\config\SystemSettingsVideoConfig.h" />
+    <ClInclude Include="ext\config\xml\XmlUtility.h" />
+    <ClInclude Include="ext\config\xml\XmlVideoSystemConfig.h" />
+    <ClInclude Include="ext\FrameNoSignalFiller.h" />
+    <ClInclude Include="ext\ImageGraph\ArchiveWriterFilter.h" />
+    <ClInclude Include="ext\ImageGraph\CommonProcessFilter.h" />
+    <ClInclude Include="ext\ImageGraph\CompressFilter.h" />
+    <ClInclude Include="ext\ImageGraph\DecompressFilter.h" />
+    <ClInclude Include="ext\ImageGraph\FramePin.h" />
+    <ClInclude Include="ext\ImageGraph\FrameWrapper.h" />
+    <ClInclude Include="ext\ImageGraph\ServerStream.h" />
+    <ClInclude Include="ext\IVideoSystemConfig.h" />
+    <ClInclude Include="ext\localvideo\LocalClientStream.h" />
+    <ClInclude Include="ext\localvideo\LocalTier.h" />
+    <ClInclude Include="ext\manager\BaseManager.h" />
+    <ClInclude Include="ext\manager\CaptureServer.h" />
+    <ClInclude Include="ext\manager\ClientManager.h" />
+    <ClInclude Include="ext\manager\DeviceRegistrar.h" />
+    <ClInclude Include="ext\manager\ManagerWindow.h" />
+    <ClInclude Include="ext\manager\ServerManager.h" />
+    <ClInclude Include="ext\manager\StreamList.h" />
+    <ClInclude Include="ext\manager\StreamManager.h" />
+    <ClInclude Include="ext\remote\archive\ArchiveClientConnection.h" />
+    <ClInclude Include="ext\remote\archive\ArchiveServerConnection.h" />
+    <ClInclude Include="ext\remote\archive\RemoteArchiveConsumer.h" />
+    <ClInclude Include="ext\remote\archive\RemoteArchiveProvider.h" />
+    <ClInclude Include="ext\remote\BasicNetExchange.h" />
+    <ClInclude Include="ext\remote\ipc\InternetAddress.h" />
+    <ClInclude Include="ext\remote\ipc\NetPacketAssembler.h" />
+    <ClInclude Include="ext\remote\ipc\NetSocket.h" />
+    <ClInclude Include="ext\remote\ipc\NetTCPClient.h" />
+    <ClInclude Include="ext\remote\ipc\NetTCPConnection.h" />
+    <ClInclude Include="ext\remote\ipc\NetTCPServer.h" />
+    <ClInclude Include="ext\remote\ipc\NetType.h" />
+    <ClInclude Include="ext\remote\ipc\NetUtil.h" />
+    <ClInclude Include="ext\remote\NetProtocol.h" />
+    <ClInclude Include="ext\remote\video\RemoteVideoConsumer.h" />
+    <ClInclude Include="ext\remote\video\RemoteVideoProviderServer.h" />
+    <ClInclude Include="ext\UuidUtility.h" />
+    <ClInclude Include="ext\videofile\vfw\VFWFileReader.h" />
+    <ClInclude Include="ext\videofile\vfw\VFWFileWriter.h" />
+    <ClInclude Include="ext\videofile\VideoFileInterface.h" />
+    <ClInclude Include="FrmBuffer.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="NetProtocol.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SmpGrbHlp.h" />
+    <ClInclude Include="Stream.h" />
+    <ClInclude Include="StreamArchive.h" />
+    <ClInclude Include="StreamClient.h" />
+    <ClInclude Include="StreamDevice.h" />
+    <ClInclude Include="StreamMMF.h" />
+    <ClInclude Include="StreamServer.h" />
+    <ClInclude Include="StreamServerEvents.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ArchiveReader.cpp" />
+    <ClCompile Include="chcs.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="chcsva.cpp" />
+    <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="Device.cpp" />
+    <ClCompile Include="DlgCompressor.cpp" />
+    <ClCompile Include="DlgConfigure.cpp" />
+    <ClCompile Include="DlgShowStream.cpp" />
+    <ClCompile Include="DrawStream.cpp" />
+    <ClCompile Include="ext\archive\ArchiveDataExchange.cpp" />
+    <ClCompile Include="ext\archive\ArchiveWriter.cpp" />
+    <ClCompile Include="ext\archive\IArchiveStreamFactory.cpp" />
+    <ClCompile Include="ext\archive\LocalArchiveStream.cpp" />
+    <ClCompile Include="ext\common\ExceptionHandler.cpp" />
+    <ClCompile Include="ext\common\FpsLogger.cpp" />
+    <ClCompile Include="ext\common\TimeFromStartProvider.cpp" />
+    <ClCompile Include="ext\config\ConfigureRegistryWrapper.cpp" />
+    <ClCompile Include="ext\config\CreateVideoSystemConfig.cpp" />
+    <ClCompile Include="ext\config\SystemSettings.cpp" />
+    <ClCompile Include="ext\config\SystemSettingsVideoConfig.cpp" />
+    <ClCompile Include="ext\config\xml\XmlVideoSystemConfig.cpp" />
+    <ClCompile Include="ext\FrameNoSignalFiller.cpp" />
+    <ClCompile Include="ext\ImageGraph\ArchiveWriterFilter.cpp" />
+    <ClCompile Include="ext\ImageGraph\CommonProcessFilter.cpp" />
+    <ClCompile Include="ext\ImageGraph\CompressFilter.cpp" />
+    <ClCompile Include="ext\ImageGraph\DecompressFilter.cpp" />
+    <ClCompile Include="ext\ImageGraph\FrameWrapper.cpp" />
+    <ClCompile Include="ext\ImageGraph\ServerStream.cpp" />
+    <ClCompile Include="ext\localvideo\LocalClientStream.cpp" />
+    <ClCompile Include="ext\localvideo\LocalTier.cpp" />
+    <ClCompile Include="ext\manager\BaseManager.cpp" />
+    <ClCompile Include="ext\manager\CaptureServer.cpp" />
+    <ClCompile Include="ext\manager\ClientManager.cpp" />
+    <ClCompile Include="ext\manager\DeviceRegistrar.cpp" />
+    <ClCompile Include="ext\manager\FindAllDevices.cpp" />
+    <ClCompile Include="ext\manager\ManagerWindow.cpp" />
+    <ClCompile Include="ext\manager\ServerManager.cpp" />
+    <ClCompile Include="ext\manager\StreamList.cpp" />
+    <ClCompile Include="ext\manager\StreamManager.cpp" />
+    <ClCompile Include="ext\remote\archive\ArchiveClientConnection.cpp" />
+    <ClCompile Include="ext\remote\archive\ArchiveServerConnection.cpp" />
+    <ClCompile Include="ext\remote\archive\RemoteArchiveConsumer.cpp" />
+    <ClCompile Include="ext\remote\archive\RemoteArchiveProvider.cpp" />
+    <ClCompile Include="ext\remote\BasicNetExchange.cpp" />
+    <ClCompile Include="ext\remote\ipc\InternetAddress.cpp" />
+    <ClCompile Include="ext\remote\ipc\NetPacketAssembler.cpp" />
+    <ClCompile Include="ext\remote\ipc\NetSocket.cpp" />
+    <ClCompile Include="ext\remote\ipc\NetTCPClient.cpp" />
+    <ClCompile Include="ext\remote\ipc\NetTCPConnection.cpp" />
+    <ClCompile Include="ext\remote\ipc\NetTCPServer.cpp" />
+    <ClCompile Include="ext\remote\ipc\NetUtil.cpp" />
+    <ClCompile Include="ext\remote\NetProtocol.cpp" />
+    <ClCompile Include="ext\remote\video\RemoteVideoConsumer.cpp" />
+    <ClCompile Include="ext\remote\video\RemoteVideoProviderServer.cpp" />
+    <ClCompile Include="ext\videofile\vfw\VFWFileReader.cpp" />
+    <ClCompile Include="ext\videofile\vfw\VFWFileWriter.cpp" />
+    <ClCompile Include="ext\videofile\VideoFileInterface.cpp" />
+    <ClCompile Include="FrmBuffer.cpp" />
+    <ClCompile Include="SmpGrbHlp.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">chcs.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">chcs.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">chcs.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">chcs.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Stream.cpp" />
+    <ClCompile Include="StreamArchive.cpp" />
+    <ClCompile Include="StreamDevice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="chcsva.def" />
+    <None Include="chcsva.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\chcsva.ico" />
+    <Image Include="res\chcsva_cnt.ico" />
+    <Image Include="res\disconnect.ico" />
+    <Image Include="res\icon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="chcsva.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ElveesTools\trunk\ElveesTools80.vcxproj">
+      <Project>{bcbf187f-49bc-450a-a05d-6b81dc23bf6f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="chcsva.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

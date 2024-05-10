@@ -1,0 +1,7 @@
+E. Gorbachev notes:
+
+wxWidgets v. 2.7.0? released at 2006-08-11
+1) Удалены - документация, примеры, скрипты конфигурирования
+2) convfig.release.vc и config.debug.vc - файлы конфигурации для vc8.0 - Monolithic DLL
+3) setup.h - USE_OPENGL = 1
+4) setup.h - удалены линковка с библиотека, которых нет в режиме Monolithic , добавлены wxmsw27.lib и wxmsw27_gl.lib

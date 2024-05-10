@@ -7,7 +7,7 @@
 
 #define NO_DSHOW_STRSAFE
 #include <dshow.h>
-#include <qedit.h>
+#include "winsdk/qedit.h"
 
 #define DISGUSTING_SAFE_RELEASE(x) \
 	if(x)\

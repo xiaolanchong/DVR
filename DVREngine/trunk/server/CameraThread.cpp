@@ -71,6 +71,11 @@ CameraThread::~CameraThread(  )
 	m_Thread.reset();
 }
 
+static int RecordExceptionInfo(...)
+{
+	return EXCEPTION_EXECUTE_HANDLER;
+}
+
 bool	CameraThread::Handled_ThreadProc()
 {	
 	__try

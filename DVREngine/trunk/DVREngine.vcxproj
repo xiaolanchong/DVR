@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Debug|Win32">
+      <Configuration>Unicode Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unicode Release|Win32">
+      <Configuration>Unicode Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{37D44F7A-0317-47C9-8AEF-2B41512B034E}</ProjectGuid>
+    <RootNamespace>DVREngine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.34714.143</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>__$(Configuration)\</OutDir>
+    <IntDir>__$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>__$(Configuration)\</OutDir>
+    <IntDir>__$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <OutDir>__$(Configuration)\</OutDir>
+    <IntDir>__$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <OutDir>__$(Configuration)\</OutDir>
+    <IntDir>__$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) "../../BIN/Debug/$(TargetFileName)"
+</Command>
+      <Outputs>../../BIN/Debug/$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DVRENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DVREngine.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\boost_1_84_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)DVREngine.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)DVREngine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) "../../BIN/Release/$(TargetFileName)"
+copy "$(TargetDir)$(TargetName).pdb" "..\..\bin\release\$(TargetName).pdb"
+</Command>
+      <Outputs>../../BIN/Release/$(TargetFileName);..\..\bin\release\$(TargetName).pdb;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DVRENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DVREngine.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\boost_1_84_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)DVREngine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
+    <CustomBuildStep>
+      <Message>copy to ../BIN/Debug</Message>
+      <Command>copy "$(TargetPath)" "../BIN/Debug/$(TargetFileName)"
+</Command>
+      <Outputs>../BIN/Debug/$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DVRENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DVREngine.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\boost_1_84_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)DVREngine.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)DVREngine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
+    <CustomBuildStep>
+      <Message>copy to ../BIN/Release</Message>
+      <Command>copy "$(TargetPath)" "../BIN/Release/$(TargetFileName)"
+</Command>
+      <Outputs>../BIN/Release/$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../boost_1_84_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DVRENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DVREngine.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\..\boost_1_84_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)DVREngine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="client\ClientImpl.cpp" />
+    <ClCompile Include="common\EngineSettingsImpl.cpp" />
+    <ClCompile Include="common\Timer.cpp" />
+    <ClCompile Include="DVREngine.cpp" />
+    <ClCompile Include="server\ActivityRecord.cpp" />
+    <ClCompile Include="server\AlarmInfo.cpp" />
+    <ClCompile Include="server\AnalyzeThread.cpp" />
+    <ClCompile Include="server\BackupImpl.cpp" />
+    <ClCompile Include="server\BaseQueueThread.cpp" />
+    <ClCompile Include="server\CameraData.cpp" />
+    <ClCompile Include="server\CameraServer.cpp" />
+    <ClCompile Include="server\CameraThread.cpp" />
+    <ClCompile Include="server\FpsLogger.cpp" />
+    <ClCompile Include="server\GlobalTimer.cpp" />
+    <ClCompile Include="server\grabber\ServerFakeReader.cpp" />
+    <ClCompile Include="server\grabber\ServerVideoFactory.cpp" />
+    <ClCompile Include="server\grabber\ServerVideoReader.cpp" />
+    <ClCompile Include="server\HallThread.cpp" />
+    <ClCompile Include="server\IArchiveUserData.cpp" />
+    <ClCompile Include="server\ImageProcessPause.cpp" />
+    <ClCompile Include="server\MessageImpl.cpp" />
+    <ClCompile Include="server\MessageStdOut.cpp" />
+    <ClCompile Include="server\message\MessageQueue.cpp" />
+    <ClCompile Include="server\message\MsgCameraResponseData.cpp" />
+    <ClCompile Include="server\message\MsgCameraSetHallData.cpp" />
+    <ClCompile Include="server\message\MsgHallRequestAlarmData.cpp" />
+    <ClCompile Include="server\message\MsgHallResponseAlarmData.cpp" />
+    <ClCompile Include="server\message\MsgHallSetCameraData.cpp" />
+    <ClCompile Include="server\MilliSecTimer.cpp" />
+    <ClCompile Include="server\PlatSleep.cpp" />
+    <ClCompile Include="server\ServerImpl.cpp" />
+    <ClCompile Include="server\SingleInstanceSentry.cpp" />
+    <ClCompile Include="server\state\ServerThreadDBConnection.cpp" />
+    <ClCompile Include="server\state\ServerThreadGathering.cpp" />
+    <ClCompile Include="server\state\ServerThreadState.cpp" />
+    <ClCompile Include="server\stub\CameraAnalyzerStub.cpp" />
+    <ClCompile Include="server\stub\HallAnalyzerStub.cpp" />
+    <ClCompile Include="server\tier\ClientServerTier.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="win\DebugServer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DVREngine.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\CommonLibs\HEAD\ExceptionHandler\trunk\ExceptionHandler.h" />
+    <ClInclude Include="client\ClientImpl.h" />
+    <ClInclude Include="common\EngineSettingsImpl.h" />
+    <ClInclude Include="common\Timer.h" />
+    <ClInclude Include="DVREngine.h" />
+    <ClInclude Include="interface\EngineSettings.h" />
+    <ClInclude Include="interface\IArchiveUserData.h" />
+    <ClInclude Include="interface\IClient.h" />
+    <ClInclude Include="interface\IServer.h" />
+    <ClInclude Include="server\ActivityRecord.h" />
+    <ClInclude Include="server\AlarmInfo.h" />
+    <ClInclude Include="server\AnalyzeThread.h" />
+    <ClInclude Include="server\BackupImpl.h" />
+    <ClInclude Include="server\BaseQueueThread.h" />
+    <ClInclude Include="server\CameraData.h" />
+    <ClInclude Include="server\CameraServer.h" />
+    <ClInclude Include="server\CameraThread.h" />
+    <ClInclude Include="server\FpsLogger.h" />
+    <ClInclude Include="server\GlobalTimer.h" />
+    <ClInclude Include="server\grabber\IVideoProvider.h" />
+    <ClInclude Include="server\grabber\ServerFakeReader.h" />
+    <ClInclude Include="server\grabber\ServerVideoFactory.h" />
+    <ClInclude Include="server\grabber\ServerVideoReader.h" />
+    <ClInclude Include="server\HallThread.h" />
+    <ClInclude Include="server\ImageProcessPause.h" />
+    <ClInclude Include="server\MessageImpl.h" />
+    <ClInclude Include="server\MessageStdOut.h" />
+    <ClInclude Include="server\message\BaseMessageProcessor.h" />
+    <ClInclude Include="server\message\IMessageDispatcher.h" />
+    <ClInclude Include="server\message\IMessageProcessor.h" />
+    <ClInclude Include="server\message\IMessageStream.h" />
+    <ClInclude Include="server\message\IThreadMessage.h" />
+    <ClInclude Include="server\message\MessageQueue.h" />
+    <ClInclude Include="server\message\MsgCameraResponseData.h" />
+    <ClInclude Include="server\message\MsgCameraSetHallData.h" />
+    <ClInclude Include="server\message\MsgHallRequestAlarmData.h" />
+    <ClInclude Include="server\message\MsgHallResponseAlarmData.h" />
+    <ClInclude Include="server\message\MsgHallSetCameraData.h" />
+    <ClInclude Include="server\MilliSecTimer.h" />
+    <ClInclude Include="server\PlatSleep.h" />
+    <ClInclude Include="server\ServerImpl.h" />
+    <ClInclude Include="server\SingleInstanceSentry.h" />
+    <ClInclude Include="server\state\ServerThreadDBConnection.h" />
+    <ClInclude Include="server\state\ServerThreadGathering.h" />
+    <ClInclude Include="server\state\ServerThreadState.h" />
+    <ClInclude Include="server\stub\CameraAnalyzerStub.h" />
+    <ClInclude Include="server\stub\HallAnalyzerStub.h" />
+    <ClInclude Include="server\tier\ClientServerTier.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\chcsva\trunk\chcsva.vcxproj">
+      <Project>{4d1b1264-9d03-467a-8187-4b66ce08bf6d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DVRAlgo\trunk\DVRAlgo1\dvralgo1.vcxproj">
+      <Project>{66ea8461-489b-4805-a0d7-e708e9dff854}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DVRBackup\trunk\DVRBackup.vcxproj">
+      <Project>{67ba750a-0cf1-4da4-a9bb-d8cb87adb9db}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DVRDBBridge\trunk\DVRDBBridge.vcxproj">
+      <Project>{339e8209-d198-412e-8a5c-22646786bd60}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

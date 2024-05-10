@@ -1,5 +1,5 @@
-set SRC_BASE_DIR=../../../../3rd_party/wxWidgets-2.7.0
-set DST_BASE_DIR=..\..\BIN
+set SRC_BASE_DIR=.
+set DST_BASE_DIR=..\BIN
 
 if "%1" == "debug" (
 	set SRC_CFG_FILE=config.debug.dll.vc

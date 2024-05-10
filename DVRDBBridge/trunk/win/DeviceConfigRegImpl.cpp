@@ -29,7 +29,7 @@ DeviceConfigRegImpl::DeviceConfigRegImpl( LPCTSTR szPath, LPCTSTR szUID, bool bC
 	s += _T("\\");
 	s += m_sUID;
 	DWORD dwRes = bCreate?	m_keyDevice.Create( HKEY_LOCAL_MACHINE, s.c_str() ):
-							m_keyDevice.Open( HKEY_LOCAL_MACHINE, s.c_str() );
+							m_keyDevice.Open( HKEY_LOCAL_MACHINE, s.c_str(), KEY_READ );
 	if( dwRes != ERROR_SUCCESS )
 	{
 		throw DBBridge::IVideoConfig::InitFailed("Failed to create/open the registry key");

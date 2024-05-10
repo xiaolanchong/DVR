@@ -37,11 +37,12 @@ void DBClientImpl::GetCameraArr(std::vector<std::pair<int, std::string> >& Camer
 try
 {
 	CameraIDArr.clear();
-#if 0 // test code
-	CameraIDArr.push_back( 1 );
-	CameraIDArr.push_back( 4 );
-	CameraIDArr.push_back( 5 );
-	CameraIDArr.push_back( 12 );
+#if 1 // test code
+	CameraIDArr.emplace_back( 1, "cam1");
+	CameraIDArr.emplace_back( 4, "cam4");
+	CameraIDArr.emplace_back( 5, "cam5");
+	CameraIDArr.emplace_back( 12, "cam12");
+	return;
 #else
 
 	std::vector<std::tstring> AllComputersInDatabase;

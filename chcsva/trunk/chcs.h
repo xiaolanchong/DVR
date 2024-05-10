@@ -105,9 +105,9 @@ extern CComModule _Module;
 // External includes
 
 // Debug version use trunk versions
-#include "../../../../CommonLibs/HEAD/ElveesTools/trunk/ElveesTools.h"
-#include "../../../../CommonLibs/HEAD/ElveesTools/trunk/VidDecoder.h"
-#include "../../../../CommonLibs/HEAD/ElveesTools/trunk/VidEncoder.h"
+#include "../../ElveesTools/trunk/ElveesTools.h"
+#include "../../ElveesTools/trunk/VidDecoder.h"
+#include "../../ElveesTools/trunk/VidEncoder.h"
 #include "ext/common/ExceptionHandler.h"
 
 //old dependence on DVRDBBridge

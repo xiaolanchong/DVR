@@ -1,60 +1,30 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVREngine", "DVREngine\trunk\DVREngine.vcproj", "{37D44F7A-0317-47C9-8AEF-2B41512B034E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{339E8209-D198-412E-8A5C-22646786BD60} = {339E8209-D198-412E-8A5C-22646786BD60}
-		{67BA750A-0CF1-4DA4-A9BB-D8CB87ADB9DB} = {67BA750A-0CF1-4DA4-A9BB-D8CB87ADB9DB}
-		{66EA8461-489B-4805-A0D7-E708E9DFF854} = {66EA8461-489B-4805-A0D7-E708E9DFF854}
-		{4D1B1264-9D03-467A-8187-4B66CE08BF6D} = {4D1B1264-9D03-467A-8187-4B66CE08BF6D}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVREngine", "DVREngine\trunk\DVREngine.vcxproj", "{37D44F7A-0317-47C9-8AEF-2B41512B034E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRClient", "DVRClient\trunk\DVRClient.vcproj", "{845BF3F0-C005-461A-8BD5-FEE27D625AEF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{339E8209-D198-412E-8A5C-22646786BD60} = {339E8209-D198-412E-8A5C-22646786BD60}
-		{4D1B1264-9D03-467A-8187-4B66CE08BF6D} = {4D1B1264-9D03-467A-8187-4B66CE08BF6D}
-		{37D44F7A-0317-47C9-8AEF-2B41512B034E} = {37D44F7A-0317-47C9-8AEF-2B41512B034E}
-		{70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E} = {70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E}
-		{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED} = {477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRClient", "DVRClient\trunk\DVRClient.vcxproj", "{845BF3F0-C005-461A-8BD5-FEE27D625AEF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRDBBridge", "DVRDBBridge\trunk\DVRDBBridge.vcproj", "{339E8209-D198-412E-8A5C-22646786BD60}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRDBBridge", "DVRDBBridge\trunk\DVRDBBridge.vcxproj", "{339E8209-D198-412E-8A5C-22646786BD60}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OGLRender", "DVRRender\trunk\OGLRender\OGLRender.vcproj", "{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}"
-	ProjectSection(ProjectDependencies) = postProject
-		{70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E} = {70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OGLRender", "DVRRender\trunk\OGLRender\OGLRender.vcxproj", "{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRBackup", "DVRBackup\trunk\DVRBackup.vcproj", "{67BA750A-0CF1-4DA4-A9BB-D8CB87ADB9DB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E} = {70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRBackup", "DVRBackup\trunk\DVRBackup.vcxproj", "{67BA750A-0CF1-4DA4-A9BB-D8CB87ADB9DB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Video Sub-system", "chcsva\trunk\chcsva.vcproj", "{4D1B1264-9D03-467A-8187-4B66CE08BF6D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{BCBF187F-49BC-450A-A05D-6B81DC23BF6F} = {BCBF187F-49BC-450A-A05D-6B81DC23BF6F}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Video Sub-system", "chcsva\trunk\chcsva.vcxproj", "{4D1B1264-9D03-467A-8187-4B66CE08BF6D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dvralgo1", "DVRAlgo\trunk\DVRAlgo1\dvralgo1.vcproj", "{66EA8461-489B-4805-A0D7-E708E9DFF854}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dvralgo1", "DVRAlgo\trunk\DVRAlgo1\dvralgo1.vcxproj", "{66EA8461-489B-4805-A0D7-E708E9DFF854}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ElveesTools", "..\..\CommonLibs\HEAD\ElveesTools\trunk\ElveesTools80.vcproj", "{BCBF187F-49BC-450A-A05D-6B81DC23BF6F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ElveesTools", "ElveesTools\trunk\ElveesTools80.vcxproj", "{BCBF187F-49BC-450A-A05D-6B81DC23BF6F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InstallHelper", "InstallHelper\trunk\InstallHelper.vcproj", "{9BF0944D-6CD2-42DD-96CC-E1B2621F2CE0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{37D44F7A-0317-47C9-8AEF-2B41512B034E} = {37D44F7A-0317-47C9-8AEF-2B41512B034E}
-		{BCBF187F-49BC-450A-A05D-6B81DC23BF6F} = {BCBF187F-49BC-450A-A05D-6B81DC23BF6F}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InstallHelper", "InstallHelper\trunk\InstallHelper.vcxproj", "{9BF0944D-6CD2-42DD-96CC-E1B2621F2CE0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InstallHelperTest", "InstallHelper\trunk\InstallHelperTest\InstallHelperTest.vcproj", "{5CBB7345-90A0-4F87-9CC9-89FD8AEF361C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9BF0944D-6CD2-42DD-96CC-E1B2621F2CE0} = {9BF0944D-6CD2-42DD-96CC-E1B2621F2CE0}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InstallHelperTest", "InstallHelper\trunk\InstallHelperTest\InstallHelperTest.vcxproj", "{5CBB7345-90A0-4F87-9CC9-89FD8AEF361C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRLauncher", "DVRLauncher\trunk\DVRLauncher.vcproj", "{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{37D44F7A-0317-47C9-8AEF-2B41512B034E} = {37D44F7A-0317-47C9-8AEF-2B41512B034E}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVRLauncher", "DVRLauncher\trunk\DVRLauncher.vcxproj", "{8CB3C9D4-1A36-4A0D-833D-6569A58C80E4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wxWidgets-2.7.0", "3rd_party\wxWidgets-2.7.0\wxWidgets-2.7.0.vcproj", "{70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wxWidgets-2.7.0", "3rd_party\wxWidgets-2.7.0\wxWidgets-2.7.0.vcxproj", "{70A78B97-9589-4E23-ACF3-A7FE2F2F1F3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +131,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBBDA653-EA1C-42DE-8824-9B0A6AA0FB44}
 	EndGlobalSection
 	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
 		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}

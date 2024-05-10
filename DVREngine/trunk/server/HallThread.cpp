@@ -72,6 +72,10 @@ void HallThread::StartThread(const std::vector<int>& CameraIDArr, bool bLaunchAl
 	m_Msg.Print( Elvees::IMessage::mt_debug_info, "[HallThread]Started" );
 }
 
+static int RecordExceptionInfo(...)
+{
+	return EXCEPTION_EXECUTE_HANDLER;
+}
 
 bool	HallThread::Handled_ThreadProc()
 {	

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\text">
+      <UniqueIdentifier>{3ac1aa3f-724d-47de-84e7-3174edac2b07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\archive">
+      <UniqueIdentifier>{cc182c6d-4551-40ac-a28f-302645753dc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bitmap">
+      <UniqueIdentifier>{619552bd-0941-44a8-9d4e-623f2fcdbcc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{c3a424c4-bd64-4973-8329-7537a494a243}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\DllMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OGLRenderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OGLStreamRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\OGLWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\text\OGLFont.cpp">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\text\OGLFontTextRender.cpp">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\text\Tahoma_8_bold_Cyr.cpp">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\text\WindowsFontBitmapTextRender.cpp">
+      <Filter>Source Files\text</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\archive\ArchiveRender.cpp">
+      <Filter>Source Files\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\archive\ArchiveState.cpp">
+      <Filter>Source Files\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\archive\ArchiveStateIdle.cpp">
+      <Filter>Source Files\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\archive\ArchiveStatePause.cpp">
+      <Filter>Source Files\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\archive\ArchiveStatePlay.cpp">
+      <Filter>Source Files\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\archive\ArchiveStateStop.cpp">
+      <Filter>Source Files\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\bitmap\IBitmapRender.cpp">
+      <Filter>Source Files\bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\bitmap\RasterRender.cpp">
+      <Filter>Source Files\bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\bitmap\TextureRender.cpp">
+      <Filter>Source Files\bitmap</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\text\ITextRender.h">
+      <Filter>Source Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\text\OGLFont.hpp">
+      <Filter>Source Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\text\OGLFontTextRender.h">
+      <Filter>Source Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\text\WindowsFontBitmapTextRender.h">
+      <Filter>Source Files\text</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\archive\ArchiveRender.h">
+      <Filter>Source Files\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\archive\ArchiveState.h">
+      <Filter>Source Files\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\archive\ArchiveStateIdle.h">
+      <Filter>Source Files\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\archive\ArchiveStatePause.h">
+      <Filter>Source Files\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\archive\ArchiveStatePlay.h">
+      <Filter>Source Files\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\archive\ArchiveStateStop.h">
+      <Filter>Source Files\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\bitmap\IBitmapRender.h">
+      <Filter>Source Files\bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\bitmap\RasterRender.h">
+      <Filter>Source Files\bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\bitmap\TextureRender.h">
+      <Filter>Source Files\bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\DllMain.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OGLRenderManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OGLStreamRender.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\OGLWrapper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DVRRender.hpp">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IDVRGraphicsWrapper.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

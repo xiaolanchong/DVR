@@ -199,7 +199,7 @@ void Storage::GetStorageInfo( std::vector<int>& camIds, DirectoryList& directory
 		int fileSize = 0;
 
 		//Storage path
-		boost::filesystem::path storagePath( GetStoragepathForFilesystem(), &boost::filesystem::native );
+		boost::filesystem::path storagePath( GetStoragepathForFilesystem()/*, &boost::filesystem::native*/);
 
 		boost::filesystem::directory_iterator directoryIt;		
 		boost::filesystem::directory_iterator directoryEndIt;	//end iterator

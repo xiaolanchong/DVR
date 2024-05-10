@@ -109,7 +109,7 @@ bool MainApp::OnInit()
 #endif
 	//FIXME : relative path
 	char buf[4096];
-	getcwd(buf, 4096);
+	_getcwd(buf, 4096);
 	std::string sResPath(buf);
 	sResPath += 
 #ifndef UNIX_RELEASE
@@ -244,6 +244,11 @@ MainFrame* MainApp::LaunchServer( bool bLaunchAlgorithm)
 	MsgBackup->Set( pBackupMsg );
 
 	return frame;
+}
+
+static int RecordExceptionInfo(...)
+{
+	return EXCEPTION_EXECUTE_HANDLER;
 }
 
 int __stdcall WinMain(  

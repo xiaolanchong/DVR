@@ -29,6 +29,7 @@
 
 #include <boost/shared_ptr.hpp>
 #include <boost/tuple/tuple.hpp>
+#include <boost/function.hpp>
 //thread
 #include <boost/thread/condition.hpp>
 #include <boost/thread/thread.hpp>
@@ -60,9 +61,9 @@
 #include "../../shared/Common/integers.h"
 #include "../../shared/Common/types.h"
 #include "../../shared/Interfaces/i_video_reader.h"
-
+#if 0
 #include "../../../../CommonLibs/head/ExceptionHandler/trunk/ExceptionHandler.h"
-
+#endif
 #ifndef ASSERT
 #define ASSERT(x) _ASSERTE(x)
 #endif

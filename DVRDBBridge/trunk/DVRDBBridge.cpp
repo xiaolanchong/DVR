@@ -60,6 +60,7 @@ protected:
 		IPAddressArr = ::GetOwnIPAddress();
 	}
 public:
+	virtual ~IDBBridgeFactory() = default;
 	virtual DBBridge::IVideoConfig*						IntCreateVideoConfig(LPCTSTR szIPAddress)								= 0;
 	virtual boost::shared_ptr<DBBridge::IDBServer>		IntCreateDBServer(const char* szConnectionString)	= 0;
 	virtual boost::shared_ptr<DBBridge::IDBClient>		IntCreateDBClient(const char* szConnectionString)	= 0;

@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="ext">
+      <UniqueIdentifier>{df7bf2ab-124e-4493-a158-baf663af2f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\localvideo">
+      <UniqueIdentifier>{e6a1c051-c2b9-4a4f-b34b-39b29a8db2f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\archive">
+      <UniqueIdentifier>{b032a12c-beb0-4a24-9fb6-81d17b058e72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\video">
+      <UniqueIdentifier>{15ac3d25-e308-4e7f-8f77-d30a912bcdd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\video\vfw">
+      <UniqueIdentifier>{a7aeafe9-c1d2-4946-8f69-1b5cc2cd0961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\imagegraph">
+      <UniqueIdentifier>{c990e70c-5704-471c-96ef-e5b7b22c961d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\manager">
+      <UniqueIdentifier>{83a06075-ab0e-4a6d-b596-1927a12cca72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\remote">
+      <UniqueIdentifier>{d6f5f8b8-15ae-4dd9-a224-9ccb78ccc2a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\remote\ipc">
+      <UniqueIdentifier>{b99390aa-f194-4eed-9401-4c57320e1550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\remote\video">
+      <UniqueIdentifier>{54743f62-f28d-4878-8eb6-a6b16b7ef759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\remote\archive">
+      <UniqueIdentifier>{9da84bb1-a344-4442-a818-c98f329e76e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\common">
+      <UniqueIdentifier>{bd0303c7-fce8-48c4-aed3-f4f6e8496c4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\config">
+      <UniqueIdentifier>{03f2ea32-c58b-499f-80cb-4b08895cca31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\config\xml">
+      <UniqueIdentifier>{020ba0ad-c42f-466f-a749-428d85d0ba07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArchiveClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArchiveReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArchiveServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chcsva.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBAccessors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCompressor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgConfigure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgShowStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FrmBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NetProtocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmpGrbHlp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamArchive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamMMF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamServerEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\common\ExceptionHandler.h">
+      <Filter>Header Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\FrameNoSignalFiller.h">
+      <Filter>ext</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\IVideoSystemConfig.h">
+      <Filter>ext</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\UuidUtility.h">
+      <Filter>ext</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\localvideo\LocalClientStream.h">
+      <Filter>ext\localvideo</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\localvideo\LocalTier.h">
+      <Filter>ext\localvideo</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\archive\ArchiveDataExchange.h">
+      <Filter>ext\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\archive\ArchiveWriter.h">
+      <Filter>ext\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\archive\IArchiveStreamFactory.h">
+      <Filter>ext\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\archive\LocalArchiveStream.h">
+      <Filter>ext\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\videofile\VideoFileInterface.h">
+      <Filter>ext\video</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\videofile\vfw\VFWFileReader.h">
+      <Filter>ext\video\vfw</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\videofile\vfw\VFWFileWriter.h">
+      <Filter>ext\video\vfw</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\ArchiveWriterFilter.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\CommonProcessFilter.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\CompressFilter.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\DecompressFilter.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\FramePin.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\FrameWrapper.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\ImageGraph\ServerStream.h">
+      <Filter>ext\imagegraph</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\BaseManager.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\CaptureServer.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\ClientManager.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\DeviceRegistrar.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\ManagerWindow.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\ServerManager.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\StreamList.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\manager\StreamManager.h">
+      <Filter>ext\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\BasicNetExchange.h">
+      <Filter>ext\remote</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\NetProtocol.h">
+      <Filter>ext\remote</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\InternetAddress.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetPacketAssembler.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetSocket.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetTCPClient.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetTCPConnection.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetTCPServer.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetType.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\ipc\NetUtil.h">
+      <Filter>ext\remote\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\video\RemoteVideoConsumer.h">
+      <Filter>ext\remote\video</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\video\RemoteVideoProviderServer.h">
+      <Filter>ext\remote\video</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\archive\ArchiveClientConnection.h">
+      <Filter>ext\remote\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\archive\ArchiveServerConnection.h">
+      <Filter>ext\remote\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\archive\RemoteArchiveConsumer.h">
+      <Filter>ext\remote\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\remote\archive\RemoteArchiveProvider.h">
+      <Filter>ext\remote\archive</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\common\FpsLogger.h">
+      <Filter>ext\common</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\common\TimeFromStartProvider.h">
+      <Filter>ext\common</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\config\ConfigureRegistryWrapper.h">
+      <Filter>ext\config</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\config\SystemSettings.h">
+      <Filter>ext\config</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\config\SystemSettingsVideoConfig.h">
+      <Filter>ext\config</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\config\xml\XmlUtility.h">
+      <Filter>ext\config\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\config\xml\XmlVideoSystemConfig.h">
+      <Filter>ext\config\xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ArchiveReader.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chcs.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chcsva.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCompressor.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgConfigure.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgShowStream.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawStream.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\common\ExceptionHandler.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmBuffer.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmpGrbHlp.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stream.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamArchive.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamDevice.cpp">
+      <Filter>Header Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\FrameNoSignalFiller.cpp">
+      <Filter>ext</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\localvideo\LocalClientStream.cpp">
+      <Filter>ext\localvideo</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\localvideo\LocalTier.cpp">
+      <Filter>ext\localvideo</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\archive\ArchiveDataExchange.cpp">
+      <Filter>ext\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\archive\ArchiveWriter.cpp">
+      <Filter>ext\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\archive\IArchiveStreamFactory.cpp">
+      <Filter>ext\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\archive\LocalArchiveStream.cpp">
+      <Filter>ext\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\videofile\VideoFileInterface.cpp">
+      <Filter>ext\video</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\videofile\vfw\VFWFileReader.cpp">
+      <Filter>ext\video\vfw</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\videofile\vfw\VFWFileWriter.cpp">
+      <Filter>ext\video\vfw</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\ImageGraph\ArchiveWriterFilter.cpp">
+      <Filter>ext\imagegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\ImageGraph\CommonProcessFilter.cpp">
+      <Filter>ext\imagegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\ImageGraph\CompressFilter.cpp">
+      <Filter>ext\imagegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\ImageGraph\DecompressFilter.cpp">
+      <Filter>ext\imagegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\ImageGraph\FrameWrapper.cpp">
+      <Filter>ext\imagegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\ImageGraph\ServerStream.cpp">
+      <Filter>ext\imagegraph</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\BaseManager.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\CaptureServer.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\ClientManager.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\DeviceRegistrar.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\FindAllDevices.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\ManagerWindow.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\ServerManager.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\StreamList.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\manager\StreamManager.cpp">
+      <Filter>ext\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\BasicNetExchange.cpp">
+      <Filter>ext\remote</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\NetProtocol.cpp">
+      <Filter>ext\remote</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\InternetAddress.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\NetPacketAssembler.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\NetSocket.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\NetTCPClient.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\NetTCPConnection.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\NetTCPServer.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\ipc\NetUtil.cpp">
+      <Filter>ext\remote\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\video\RemoteVideoConsumer.cpp">
+      <Filter>ext\remote\video</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\video\RemoteVideoProviderServer.cpp">
+      <Filter>ext\remote\video</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\archive\ArchiveClientConnection.cpp">
+      <Filter>ext\remote\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\archive\ArchiveServerConnection.cpp">
+      <Filter>ext\remote\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\archive\RemoteArchiveConsumer.cpp">
+      <Filter>ext\remote\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\remote\archive\RemoteArchiveProvider.cpp">
+      <Filter>ext\remote\archive</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\common\FpsLogger.cpp">
+      <Filter>ext\common</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\common\TimeFromStartProvider.cpp">
+      <Filter>ext\common</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\config\ConfigureRegistryWrapper.cpp">
+      <Filter>ext\config</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\config\SystemSettings.cpp">
+      <Filter>ext\config</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\config\SystemSettingsVideoConfig.cpp">
+      <Filter>ext\config</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\config\CreateVideoSystemConfig.cpp">
+      <Filter>ext\config\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\config\xml\XmlVideoSystemConfig.cpp">
+      <Filter>ext\config\xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="chcsva.def">
+      <Filter>Header Files\Source Files</Filter>
+    </None>
+    <None Include="chcsva.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\chcsva.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\chcsva_cnt.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\disconnect.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="chcsva.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

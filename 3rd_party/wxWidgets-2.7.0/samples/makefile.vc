@@ -1,0 +1,9 @@
+#just for shut up NMAKE in lines:
+#	cd ..\..\samples
+#	$(MAKE) -f makefile.vc $(MAKEARGS) clean
+#	cd $(MAKEDIR)
+#
+
+build:
+
+clean:

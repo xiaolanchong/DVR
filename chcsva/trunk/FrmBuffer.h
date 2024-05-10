@@ -74,7 +74,7 @@ private:
                       // data member in the class.
 private:
 	static void *operator new(unsigned objSize, unsigned bufferSize);
-	static void operator delete(void *pObj, unsigned bufferSize);
+	static void operator delete(void *pObj) noexcept;
       
 	CFrmBuffer(Allocator &allocator, unsigned size);
 

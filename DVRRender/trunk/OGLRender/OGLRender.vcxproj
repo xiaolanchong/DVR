@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{477E09D3-CF34-4C27-82BD-1F7F0F3CC2ED}</ProjectGuid>
+    <RootNamespace>OGLRender</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.34714.143</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) "../../../Bin/Debug/$(TargetFileName)"
+</Command>
+      <Outputs>../../../Bin/Debug/$(TargetFileName);%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../../../../boost_1_84_0;../../../3rd_party\wxWidgets-2.7.0\include\msvc;../../../3rd_party\wxWidgets-2.7.0\include;../../../chcsva/trunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;WXUSINGDLL;__WXMSW__;_DEBUG;_WINDOWS;FROMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;rpcrt4.lib;winmm.lib;advapi32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)external/glut;../../../../../boost_1_84_0/stage/lib;../../../3rd_party/wxWidgets-2.7.0/lib/vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)OGLRender.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol />
+      <NoEntryPoint>false</NoEntryPoint>
+      <SupportUnloadOfDelayLoadedDLL>false</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>$(OutDir)OGLRender.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Command>copy $(TargetPath) "../../../Bin/Release/$(TargetFileName)"
+copy "$(TargetDir)$(TargetName).pdb" "..\..\..\bin\release\$(TargetName).pdb"</Command>
+      <Outputs>../../../Bin/Release/$(TargetFileName);..\..\..\bin\release\$(TargetName).pdb;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../../../boost_1_84_0;../../../3rd_party\wxWidgets-2.7.0\include\msvc;../../../3rd_party\wxWidgets-2.7.0\include;../../../chcsva/trunk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OGLRENDER_EXPORTS;WXUSINGDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;comctl32.lib;rpcrt4.lib;winmm.lib;advapi32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)external/glut;../../../../../boost_1_84_0/stage/lib;../../../3rd_party/wxWidgets-2.7.0/lib/vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)OGLRender.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\archive\ArchiveRender.cpp" />
+    <ClCompile Include="Sources\archive\ArchiveState.cpp" />
+    <ClCompile Include="Sources\archive\ArchiveStateIdle.cpp" />
+    <ClCompile Include="Sources\archive\ArchiveStatePause.cpp" />
+    <ClCompile Include="Sources\archive\ArchiveStatePlay.cpp" />
+    <ClCompile Include="Sources\archive\ArchiveStateStop.cpp" />
+    <ClCompile Include="Sources\bitmap\IBitmapRender.cpp" />
+    <ClCompile Include="Sources\bitmap\RasterRender.cpp" />
+    <ClCompile Include="Sources\bitmap\TextureRender.cpp" />
+    <ClCompile Include="Sources\DllMain.cpp" />
+    <ClCompile Include="Sources\OGLRenderManager.cpp" />
+    <ClCompile Include="Sources\OGLStreamRender.cpp" />
+    <ClCompile Include="Sources\OGLWrapper.cpp" />
+    <ClCompile Include="Sources\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sources\text\OGLFont.cpp" />
+    <ClCompile Include="Sources\text\OGLFontTextRender.cpp" />
+    <ClCompile Include="Sources\text\Tahoma_8_bold_Cyr.cpp" />
+    <ClCompile Include="Sources\text\WindowsFontBitmapTextRender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DVRRender.hpp" />
+    <ClInclude Include="..\IDVRGraphicsWrapper.h" />
+    <ClInclude Include="Sources\archive\ArchiveRender.h" />
+    <ClInclude Include="Sources\archive\ArchiveState.h" />
+    <ClInclude Include="Sources\archive\ArchiveStateIdle.h" />
+    <ClInclude Include="Sources\archive\ArchiveStatePause.h" />
+    <ClInclude Include="Sources\archive\ArchiveStatePlay.h" />
+    <ClInclude Include="Sources\archive\ArchiveStateStop.h" />
+    <ClInclude Include="Sources\bitmap\IBitmapRender.h" />
+    <ClInclude Include="Sources\bitmap\RasterRender.h" />
+    <ClInclude Include="Sources\bitmap\TextureRender.h" />
+    <ClInclude Include="Sources\DllMain.hpp" />
+    <ClInclude Include="Sources\OGLRenderManager.hpp" />
+    <ClInclude Include="Sources\OGLStreamRender.hpp" />
+    <ClInclude Include="Sources\OGLWrapper.hpp" />
+    <ClInclude Include="Sources\StdAfx.h" />
+    <ClInclude Include="Sources\text\ITextRender.h" />
+    <ClInclude Include="Sources\text\OGLFont.hpp" />
+    <ClInclude Include="Sources\text\OGLFontTextRender.h" />
+    <ClInclude Include="Sources\text\WindowsFontBitmapTextRender.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\3rd_party\wxWidgets-2.7.0\wxWidgets-2.7.0.vcxproj">
+      <Project>{70a78b97-9589-4e23-acf3-a7fe2f2f1f3e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

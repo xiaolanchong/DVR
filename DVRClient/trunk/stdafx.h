@@ -79,7 +79,7 @@ using namespace boost::posix_time;
 // GLUT
 //#include "../../3rd_party/glut-3.7/include/gl/glut.h"
 
-#include "../../../../CommonLibs/HEAD/ExceptionHandler/trunk/ExceptionHandler.h"
+//#include "../../../../CommonLibs/HEAD/ExceptionHandler/trunk/ExceptionHandler.h"
 
 // shared
 #include "../../Shared/Interfaces/i_message.h"

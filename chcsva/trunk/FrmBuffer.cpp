@@ -37,7 +37,7 @@ void* CFrmBuffer::operator new(unsigned objectSize, unsigned bufferSize)
 	return malloc((objectSize + bufferSize + 0xFFF) & 0xFFFFF000);
 }
 
-void CFrmBuffer::operator delete(void *pObject, unsigned)
+void CFrmBuffer::operator delete(void *pObject) noexcept
 {
 	free(pObject);
 }

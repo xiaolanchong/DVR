@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{193da13d-31d6-48d8-a3c5-83a00f3f3ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{4c68930e-58de-4462-9cb9-83df7d7a8e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\layout">
+      <UniqueIdentifier>{20e3629c-714c-4068-824b-53391a17dd58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\exception">
+      <UniqueIdentifier>{0d001cd0-52fe-4fe0-8c85-86be7fcd24e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_realtime">
+      <UniqueIdentifier>{ba0c4c1c-e0d0-466b-a72f-66537c02bf3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_archive">
+      <UniqueIdentifier>{ce99b609-180d-4a84-be6a-082ecbf45aa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_archive\left">
+      <UniqueIdentifier>{91ffd812-a862-4e3d-b5cb-f764e0b7f596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_archive\right">
+      <UniqueIdentifier>{6150c202-a0cc-45e2-9c6d-7ac66d1d8738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_archive\right\control">
+      <UniqueIdentifier>{678dff0d-8302-490e-9511-aa415ebadb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_archive\right\datetimepicker">
+      <UniqueIdentifier>{bd81e8dd-0713-41c6-bdf5-8a7a65a4f816}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{8daa27e2-fbdb-4bd4-838c-93096a2726af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mod_log">
+      <UniqueIdentifier>{9a1730a6-8ec0-4632-b44f-cf1fed87a57e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main\CommandParam.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\MainApp.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\MainFrame.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\MainNotebook.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CameraCanvas.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CameraFrame.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CameraNaming.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\DBHandler.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\LayoutKeeper.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\RenderEventHandler.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\LayoutCameraManager.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\LayoutIndex.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\LayoutManager.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\LayoutRect.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\ScaleKeepAspectRatio.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\ScaleKeepSize.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\ScaleStretch.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="common\layout\WeightLayout.cpp">
+      <Filter>common\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_realtime\SettingsDialog.cpp">
+      <Filter>mod_realtime</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_realtime\VideoCanvas.cpp">
+      <Filter>mod_realtime</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_realtime\VideoFrame.cpp">
+      <Filter>mod_realtime</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\ArchiveSplitter.cpp">
+      <Filter>mod_archive</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\AlarmArchiveData.cpp">
+      <Filter>mod_archive\left</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\ArchiveCanvas.cpp">
+      <Filter>mod_archive\left</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\ArchiveFrame.cpp">
+      <Filter>mod_archive\left</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\VideoSeeker.cpp">
+      <Filter>mod_archive\left</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\ArchiveControlPanel.cpp">
+      <Filter>mod_archive\right</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\CameraNumberStatic.cpp">
+      <Filter>mod_archive\right</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\alarmcontrol\AlarmViewControl.cpp">
+      <Filter>mod_archive\right\control</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\ArchiveFrameState.cpp">
+      <Filter>mod_archive\right\control</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\alarmcontrol\DayTimeLineRender.cpp">
+      <Filter>mod_archive\right\control</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\alarmcontrol\HourLineRender.cpp">
+      <Filter>mod_archive\right\control</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\alarmcontrol\ITimeLineRender.cpp">
+      <Filter>mod_archive\right\control</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\alarmcontrol\MinuteTimeLineRender.cpp">
+      <Filter>mod_archive\right\control</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_archive\DateTimeSource.cpp">
+      <Filter>mod_archive\right\datetimepicker</Filter>
+    </ClCompile>
+    <ClCompile Include="server\ServerHandler.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_log\HtmlLog.cpp">
+      <Filter>mod_log</Filter>
+    </ClCompile>
+    <ClCompile Include="mod_log\LogFrame.cpp">
+      <Filter>mod_log</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="res\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\CommandParam.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\MainFrame.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\MainNotebook.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CameraCanvas.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CameraFrame.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CameraNaming.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\DBHandler.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ICameraName.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\IMenuHandler.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\LayoutKeeper.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MessagePluggable.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\RenderEventHandler.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\IAreaLayout.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\IAreaScale.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\LayoutCameraManager.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\LayoutIndex.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\LayoutManager.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\LayoutRect.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\ScaleKeepAspectRatio.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\ScaleKeepSize.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\ScaleStretch.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="common\layout\WeightLayout.h">
+      <Filter>common\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\CommonLibs\HEAD\ExceptionHandler\trunk\ExceptionHandler.h">
+      <Filter>common\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_realtime\SettingsDialog.h">
+      <Filter>mod_realtime</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_realtime\VideoCanvas.h">
+      <Filter>mod_realtime</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_realtime\VideoFrame.h">
+      <Filter>mod_realtime</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\ArchiveSplitter.h">
+      <Filter>mod_archive</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\AlarmArchiveData.h">
+      <Filter>mod_archive\left</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\ArchiveCanvas.h">
+      <Filter>mod_archive\left</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\ArchiveFrame.h">
+      <Filter>mod_archive\left</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\VideoSeeker.h">
+      <Filter>mod_archive\left</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\ArchiveControlPanel.h">
+      <Filter>mod_archive\right</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\CameraNumberStatic.h">
+      <Filter>mod_archive\right</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\alarmcontrol\AlarmViewControl.h">
+      <Filter>mod_archive\right\control</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\ArchiveFrameState.h">
+      <Filter>mod_archive\right\control</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\alarmcontrol\DayTimeLineRender.h">
+      <Filter>mod_archive\right\control</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\alarmcontrol\HourLineRender.h">
+      <Filter>mod_archive\right\control</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\alarmcontrol\ITimeLineRender.h">
+      <Filter>mod_archive\right\control</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\alarmcontrol\MinuteTimeLineRender.h">
+      <Filter>mod_archive\right\control</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_archive\DateTimeSource.h">
+      <Filter>mod_archive\right\datetimepicker</Filter>
+    </ClInclude>
+    <ClInclude Include="server\ServerHandler.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_log\HtmlLog.h">
+      <Filter>mod_log</Filter>
+    </ClInclude>
+    <ClInclude Include="mod_log\LogFrame.h">
+      <Filter>mod_log</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DVRClient.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\DVRClient.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\DVRClient.manifest">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

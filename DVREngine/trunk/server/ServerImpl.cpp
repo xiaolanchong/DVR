@@ -113,6 +113,11 @@ void	ServerImpl::SendMessage(IMessageStream* pSender, ThreadMessage_t pMsg)
 	mq.Push( pMsg );
 }
 
+static int RecordExceptionInfo(...)
+{
+	return EXCEPTION_EXECUTE_HANDLER;
+}
+
 bool	ServerImpl::Handled_ServerThreadProc()
 {	
 	__try
